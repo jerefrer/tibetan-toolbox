@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+permalink: /type-tibetan/cheat-sheet/index.html
+eleventyComputed:
+  title: "{{ typing.sheet.title }}"
+  description: "{{ typing.sheet.metaDescription }}"
+scripts:
+  - /assets/js/cheat-sheet.js
+---
+{#- Drawn at build time: the Tibetan is never written in the data, the `wylie` filter makes it with the practice's own converter, so that the sheet and the practice cannot disagree. #}
+{%- set s = typing.sheet -%}
+{%- macro cell(w) %}<li class="sheet-cell"><span class="sheet-cell__bo" lang="bo">{{ w | wylie }}</span><kbd>{{ w }}</kbd></li>{% endmacro -%}
+<div class="wrap page" data-cheat-sheet>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a> <span aria-hidden="true">/</span> <a href="{{ '/type-tibetan/' | url }}">Type Tibetan</a> <span aria-hidden="true">/</span> <span>{{ s.title }}</span></nav>
+  <h1 class="page__title">{{ s.title }}</h1>
+  <p class="device__lead">{{ s.lead }}</p>
+  <p class="actions sheet__actions" data-print-hide>
+    <a class="btn" href="{{ '/downloads/wylie-cheat-sheet.pdf' | url }}" download>{{ s.pdf }}</a>
+    <button type="button" class="btn btn--outline" data-role="print-sheet">{{ s.print }}</button>
+    <a class="btn btn--outline" href="{{ '/type-tibetan/practice/' | url }}">{{ s.practise }}</a>
+  </p>
+
+  <section class="sheet" aria-labelledby="sheet-consonants">
+    <h2 id="sheet-consonants">{{ s.consonantsTitle }}</h2>
+    <ul class="sheet-grid sheet-grid--4">{% for w in s.consonants %}{{ cell(w) }}{% endfor %}</ul>
+  </section>
+
+  <section class="sheet" aria-labelledby="sheet-vowels">
+    <h2 id="sheet-vowels">{{ s.vowelsTitle }}</h2>
+    <ul class="sheet-grid sheet-grid--4">{% for w in s.vowels %}{{ cell(w) }}{% endfor %}</ul>
+    <p class="sheet__note">{{ s.vowelsNote | richText | safe }}</p>
+  </section>
+
+  <section class="sheet" aria-labelledby="sheet-stacks">
+    <h2 id="sheet-stacks">{{ s.stacksTitle }}</h2>
+    <p class="sheet__note">{{ s.stacksNote | richText | safe }}</p>
+    <ul class="sheet-grid sheet-grid--5">{% for w in s.stacks %}{{ cell(w) }}{% endfor %}</ul>
+  </section>
+
+  <section class="sheet" aria-labelledby="sheet-operators">
+    <h2 id="sheet-operators">{{ s.operatorsTitle }}</h2>
+    <table class="sheet-table">
+      <tbody>
+        {%- for row in s.operators %}
+        <tr><td><kbd>{{ row.wylie }}</kbd></td><td class="sheet-table__bo" lang="bo">{{ row.wylie | wylie }}</td><td>{{ row.note | richText | safe }}</td></tr>
+        {%- endfor %}
+        {%- for row in s.punctuation %}
+        <tr><td><kbd>{{ row.keys }}</kbd></td><td class="sheet-table__bo" lang="bo">{{ row.from | wylie }}</td><td>{{ row.note | richText | safe }}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    <p class="sheet__note">{{ s.macNote }}</p>
+  </section>
+
+  <p class="sheet__source">{{ s.source }}</p>
+  <p class="actions sheet__actions" data-print-hide>
+    <a class="btn btn--outline" href="{{ typing.windowsKeyboard.reference }}" rel="noopener">{{ s.reference }}<span class="sr-only"> {{ s.opensInNewTab }}</span></a>
+  </p>
+</div>

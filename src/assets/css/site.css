@@ -311,6 +311,47 @@ kbd {
   .practice__feedback { min-height: 11rem; }
 }
 
+/* Web cheat sheet, drawn at build time. Jomolhari draws small and sits high, so Tibetan is enlarged and lowered. */
+.bo { font-family: var(--bo); font-size: 1.6em; line-height: 1; white-space: nowrap; vertical-align: -0.3em; }
+.sheet { margin-top: 44px; }
+.sheet__note { margin-top: 12px; font-size: 17px; line-height: 1.6; color: var(--muted); max-width: 720px; }
+.sheet-grid { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 8px; }
+.sheet-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.sheet-grid--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.sheet-cell { display: flex; flex-direction: column; align-items: center; background: var(--soft); border-radius: 12px; padding: 12px 6px; }
+.sheet-cell__bo { font-family: var(--bo); font-size: 48px; line-height: 1.5; color: var(--ink); }
+.sheet-cell kbd { font-size: 19px; }
+.sheet-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+.sheet-table td { padding: 12px 20px 12px 0; border-bottom: 1px solid var(--line); vertical-align: middle; font-size: 17px; }
+.sheet-table kbd { font-size: 20px; }
+.sheet-table td.sheet-table__bo { font-family: var(--bo); font-size: 44px; line-height: 1.4; padding-top: 24px; }
+.sheet__actions .btn { flex: 0 1 auto; max-width: 100%; }
+.sheet__source { display: none; margin-top: 24px; font-size: 13px; color: var(--muted); }
+@media (max-width: 640px) {
+  .sheet-grid--5 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sheet-cell__bo { font-size: 40px; }
+  .sheet-table td.sheet-table__bo { font-size: 36px; }
+}
+/* On paper, the sheet alone, two A4 pages. */
+@media print {
+  .site-header, .site-footer, .crumbs, [data-print-hide], .skip { display: none !important; }
+  .page { padding: 0; max-width: none; }
+  .page__title { font-size: 28px; margin-bottom: 8px; }
+  .device__lead { font-size: 15px; margin-bottom: 8px; }
+  .sheet { margin-top: 18px; }
+  .sheet h2 { font-size: 20px; }
+  .sheet-grid { gap: 4px; margin-top: 8px; }
+  .sheet-grid--4 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+  .sheet-grid--5 { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+  .sheet-cell { padding: 4px 2px; }
+  .sheet-cell__bo { font-size: 34px; line-height: 1.3; }
+  .sheet-cell kbd { font-size: 15px; }
+  .sheet-table td { padding: 4px 12px 4px 0; font-size: 14px; }
+  .sheet-table td.sheet-table__bo { font-size: 34px; }
+  .sheet__note { font-size: 14px; margin-top: 6px; }
+  .sheet__source { display: block; }
+}
+
 /* Catalogue */
 .cat { padding-top: 32px; padding-bottom: 64px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
 .filters { flex: 1 1 220px; max-width: 260px; font-size: 15px; }

@@ -141,3 +141,37 @@ practice:
     - { wylie: g.yas g.yon, meaning: right and left }
     - { wylie: pad+ma, meaning: lotus }
     - { wylie: oM ma Ni pad+me hUM, meaning: the mantra of Avalokiteśvara }
+# The web cheat sheet (/type-tibetan/cheat-sheet/). The Tibetan is never written here: the page draws
+# it from the Wylie with the practice's own converter, so the two cannot disagree.
+sheet:
+  title: Wylie cheat sheet
+  metaDescription: What to type for each Tibetan letter, vowel and stack in Wylie, on a Mac and on Windows. A printable cheat sheet, also as a PDF.
+  lead: What to type for each letter. The same on a Mac and on Windows, except where noted.
+  pdf: Download the cheat sheet (PDF)
+  print: Print it
+  practise: Practise it
+  source: From the Tibetan Toolbox - tibetantoolbox.org/type-tibetan/cheat-sheet/
+  consonantsTitle: The thirty letters
+  vowelsTitle: Vowels
+  vowelsNote: "A vowel at the start of a syllable sits on ཨ by itself: type `e ma` for ཨེ་མ."
+  stacksTitle: Stacks
+  stacksNote: "Letters stack by themselves when Tibetan stacks them: superscribed r, l and s, and subscribed y, r, l and w."
+  operatorsTitle: When Wylie needs telling
+  macNote: "On a Mac, the + is Shift and the key just left of Delete - on an English keyboard, the + key itself."
+  reference: Every combination the Windows keyboard accepts
+  opensInNewTab: "(on GitHub, opens another site)"
+  # In the order every Tibetan learner recites them, four to a line.
+  consonants: [ka, kha, ga, nga, ca, cha, ja, nya, ta, tha, da, na, pa, pha, ba, ma, tsa, tsha, dza, wa, zha, za, "'a", ya, ra, la, sha, sa, ha, a]
+  vowels: [ki, ku, ke, ko]
+  stacks: [rka, lta, sna, kya, kra, kla, kwa, rgya, skra]
+  operators:
+    - { wylie: g.yas, note: keeps two letters side by side }
+    - { wylie: pad+ma, note: stacks letters that would not stack by themselves }
+    - { wylie: kA, note: "a long vowel (also `aa`)" }
+    - { wylie: oM, note: anusvara }
+    - { wylie: aH, note: visarga }
+  # What a key writes when it is not a letter: each shows its own label.
+  punctuation:
+    - { keys: space, from: " ", note: the dot between syllables }
+    - { keys: "/", from: "/", note: "shad, at the end of a phrase" }
+    - { keys: x, from: "", note: "an ordinary space, on Windows (also `_`)" }

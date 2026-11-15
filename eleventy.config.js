@@ -65,6 +65,15 @@ export default function (eleventyConfig) {
   // sheet drawn at build time cannot disagree with it.
   eleventyConfig.addFilter("wylie", (text) => fromWylie(String(text)));
 
+  // Like "inline", with every run of Tibetan set in Jomolhari (the font is lowered and enlarged in CSS).
+  eleventyConfig.addFilter("richText", (text) => {
+    const escaped = String(text).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    return escaped
+      .replace(/([\u0F00-\u0FFF]+)/g, '<span class="bo" lang="bo">$1</span>')
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/`(.+?)`/g, "<kbd>$1</kbd>");
+  });
+
   return {
     pathPrefix: "/",
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
