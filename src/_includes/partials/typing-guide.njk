@@ -2,7 +2,7 @@
   <h2 id="devices-heading">Choose your device</h2>
   <ul class="device-cards">
     {%- for d in typing.devices %}
-    <li><a href="{{ d | deviceHref | url }}" data-os="{{ d.id }}">{% include "icons/os/" + d.id + ".svg" %}<strong>{{ d.name }}</strong><span>{{ d.card }}</span><span class="device-cards__yours" hidden>Your device</span></a></li>
+    <li><a href="{{ d | deviceHref | url }}" data-os="{{ d.id }}"><span class="os-badge os-badge--{{ d.id }}">{% include "icons/os/" + d.id + ".svg" %}</span><strong>{{ d.name }}</strong><span>{{ d.card }}</span><span class="device-cards__yours" hidden>Your device</span></a></li>
     {%- endfor %}
   </ul>
   <p class="credit">{{ typing.credit }}</p>

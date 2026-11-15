@@ -23,6 +23,8 @@
   --flag-green: #23935f; --flag-green-bg: #e6f5ee; --flag-green-tint: #bfe3d0;
   --flag-yellow: #c4800f; --flag-yellow-bg: #fdf3e1; --flag-yellow-tint: #f2cf94;
   /* Wrapped pechas: cloth and brocade colours. */
+  /* Platform badges, in the prayer-flag colours. */
+  --os-mac: var(--saffron); --os-windows: var(--flag-blue); --os-ios: var(--flag-red); --os-android: var(--flag-green);
   --cloth-orange: #e0782c; --cloth-saffron: #e09a2c; --brocade-gold: #f2c94c;
   --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   --bo: "Jomolhari", "Noto Serif Tibetan", serif;
@@ -152,6 +154,12 @@ kbd {
 .band__tiles a { background: var(--band); border-radius: 14px; min-height: 120px; padding: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: var(--band-text); border: 2px solid transparent; height: 100%; }
 .band__tiles a:hover { border-color: var(--saffron); color: var(--white); }
 .band__os { width: 36px; height: 36px; color: var(--white); margin-bottom: 8px; }
+.os-badge { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; flex: none; }
+.os-badge .band__os { width: 30px; height: 30px; margin: 0; color: var(--white); }
+.os-badge--mac { background: var(--os-mac); }
+.os-badge--windows { background: var(--os-windows); }
+.os-badge--ios { background: var(--os-ios); }
+.os-badge--android { background: var(--os-android); }
 .band__device { font-size: 20px; font-weight: 700; color: var(--white); text-align: center; }
 .band__state { font-size: 14px; }
 
@@ -213,7 +221,8 @@ kbd {
 .device-cards a:hover { border-color: var(--lapis); color: var(--ink); }
 .device-cards strong { font-size: 20px; }
 .device-cards span { font-size: 15px; color: var(--muted); }
-.device-cards .band__os { width: 28px; height: 28px; color: var(--lapis); margin-bottom: 6px; }
+.device-cards .os-badge { width: 48px; height: 48px; border-radius: 14px; margin-bottom: 8px; }
+.device-cards .os-badge .band__os { width: 26px; height: 26px; }
 .device-cards a.is-yours { border-color: var(--lapis); background: var(--white); }
 .device-cards .device-cards__yours { align-self: flex-start; margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--lapis); background: var(--pill); padding: 3px 10px; border-radius: 999px; }
 .platform-switch { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; }
