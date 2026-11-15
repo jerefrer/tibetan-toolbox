@@ -1,4 +1,5 @@
 # One entry per need page. `filter` is the short label used in the catalogue sidebar.
+# Optional `toolOrder`: tool ids in the order the need page shows them.
 - id: type-tibetan
   slug: type-tibetan
   name: Type Tibetan
@@ -27,6 +28,10 @@
   filter: Phonetics & IAST
   colour: green
   tile: Tibetan to Phonetics, and Mantra to IAST & Phonetics.
+  # Shown in this order; tools not listed follow alphabetically.
+  toolOrder: [kvp-phonetics, tibetan-to-phonetics-app, mantra-to-iast-app, lotsawa-phonetics, thl-phonetics,
+    tibetan-syllable-parser, tibetan-to-phonetics, tibetan-sanskrit-transliteration-data,
+    tibetan-mantra-to-iast-and-phonetics, tibetan-sanskrit-transliteration]
   title: Phonetics and IAST
   metaDescription: Tools that turn Tibetan script into readable phonetics, Wylie, or IAST transliteration for Sanskrit mantras.
   intro:

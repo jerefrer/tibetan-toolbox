@@ -48,6 +48,19 @@
   repo: https://github.com/jerefrer/pecha-printer
   maintainer: jerefrer
 
+- id: kvp-phonetics
+  name: KVP Tibetan Phonetics
+  url: https://phonetics.frerejeremy.me/
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: The phonetics generator made for the Khyentse Vision Project. Converts Tibetan into phonetics in several styles, with word splitting, built on Élie Roux's bophono library.
+  needs: [phonetics-iast]
+  platforms: [web]
+  free: true
+  openSource: true
+  developer: false
+  repo: https://github.com/jerefrer/kvp-phonserv
+  maintainer: jerefrer
+
 - id: tibetan-to-phonetics-app
   name: Tibetan to Phonetics
   url: https://jerefrer.github.io/tibetan-to-phonetics-app/
@@ -422,7 +435,7 @@
   url: https://thlib.org/terms/#/terms/transliterate
   author: { name: Tibetan and Himalayan Library (THL), url: https://thlib.org/ }
   description: The Tibetan and Himalayan Library's online converter between Tibetan script and Wylie transliteration, in its Tibetan Terms section.
-  needs: [type-tibetan, phonetics-iast]
+  needs: [type-tibetan]
   platforms: [web]
   free: true
   openSource: false

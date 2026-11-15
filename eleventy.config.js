@@ -14,6 +14,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("toolsForNeed", (tools, needId) =>
     tools.filter((tool) => tool.needs.includes(needId)),
   );
+  // A need may list its tools in a chosen order; unlisted tools keep the default order after them.
+  eleventyConfig.addFilter("inNeedOrder", (tools, need) => {
+    const order = need.toolOrder ?? [];
+    const rank = (tool) => (order.includes(tool.id) ? order.indexOf(tool.id) : order.length);
+    return [...tools].sort((a, b) => rank(a) - rank(b));
+  });
   const byName = (a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" });
   // Neutral order: alphabetical, whoever the author is.
   eleventyConfig.addFilter("userTools", (tools) => tools.filter((tool) => !tool.developer).sort(byName));
@@ -25,6 +31,8 @@ export default function (eleventyConfig) {
     needIds.map((id) => needs.find((n) => n.id === id)?.name ?? id),
   );
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
+
+  });
   // Platforms with a video have their own page; the others are a section of /type-tibetan/.
   eleventyConfig.addFilter("deviceHref", (device) =>
     device.video ? `/type-tibetan/${device.id}/` : `/type-tibetan/#${device.id}`,

@@ -26,8 +26,8 @@ eleventyComputed:
   <section aria-labelledby="tools-heading" class="tool-section">
     <h2 id="tools-heading">{% if need.id == 'type-tibetan' %}More ways to type and convert{% else %}Tools{% endif %}</h2>
     <div class="tool-list">
-      {%- for t in matching | userTools %}{{ toolCard(t, needs, platforms, false) }}{% endfor %}
-      {%- for t in matching | devTools %}{{ toolCard(t, needs, platforms, false) }}{% endfor %}
+      {%- for t in matching | userTools | inNeedOrder(need) %}{{ toolCard(t, needs, platforms, false) }}{% endfor %}
+      {%- for t in matching | devTools | inNeedOrder(need) %}{{ toolCard(t, needs, platforms, false) }}{% endfor %}
     </div>
     <p class="note">Missing a tool? <a href="{{ '/suggest/' | url }}">Suggest it</a>. See also <a href="{{ '/all/' | url }}">all tools</a>.</p>
   </section>
