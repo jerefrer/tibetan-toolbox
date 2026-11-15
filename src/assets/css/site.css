@@ -127,6 +127,10 @@ kbd {
 .tile[class*="tile--"] { background: var(--c-bg); }
 .tile[class*="tile--"]:hover { border-color: var(--c); }
 .tile__icon { width: 76px; height: 76px; display: block; }
+.need-head { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
+.need-head .page__title { margin-bottom: 0; }
+.need-head__icon { flex: none; display: flex; align-items: center; justify-content: center; width: 88px; height: 88px; border-radius: 20px; background: var(--c-bg); }
+.need-head__icon .tile__icon { width: 64px; height: 64px; }
 .tile__icon .i-f { fill: var(--c); }
 .tile__icon .i-s { stroke: var(--c); }
 .tile__icon .i-p { fill: var(--white); }

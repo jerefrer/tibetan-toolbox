@@ -14,7 +14,11 @@ eleventyComputed:
 {%- set matching = tools | toolsForNeed(need.id) -%}
 <div class="wrap page">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a> <span aria-hidden="true">/</span> <span>{{ need.title }}</span></nav>
-  <h1 class="page__title">{{ need.title }}</h1>
+  <div class="need-head">
+    {#- The same drawing as the need's tile on the home page. #}
+    <span class="need-head__icon tile--{{ need.colour }}">{% include "icons/needs/" + need.id + ".svg" %}</span>
+    <h1 class="page__title">{{ need.title }}</h1>
+  </div>
   <div class="prose prose--lead">
     {%- for p in need.intro %}
     <p>{{ p | inline | safe }}</p>
