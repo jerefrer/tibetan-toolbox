@@ -1,0 +1,66 @@
+<section class="guide" aria-labelledby="devices-heading">
+  <h2 id="devices-heading">Choose your device</h2>
+  <ul class="device-cards">
+    {%- for d in typing.devices %}
+    <li><a href="#{{ d.id }}"><strong>{{ d.name }}</strong><span>{{ d.card }}</span></a></li>
+    {%- endfor %}
+  </ul>
+  <p class="credit">{{ typing.credit }}</p>
+
+  {%- for d in typing.devices %}
+  <section class="device" id="{{ d.id }}" aria-labelledby="{{ d.id }}-heading">
+    <h2 id="{{ d.id }}-heading">{{ d.title }}</h2>
+    <p class="device__lead">{{ d.lead }}</p>
+    {%- if d.video %}
+    <div class="video">
+      <iframe src="https://www.youtube-nocookie.com/embed/{{ d.video.id }}" title="{{ d.video.title }}" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p class="video__caption">{{ d.video.title }} - <a href="https://www.youtube.com/watch?v={{ d.video.id }}" rel="noopener">watch on YouTube</a></p>
+    {%- endif %}
+    {%- if d.steps.length %}
+    <ol class="steps">
+      {%- for s in d.steps %}<li>{{ s | inline | safe }}</li>{% endfor %}
+    </ol>
+    {%- endif %}
+    {%- if d.id == 'windows' %}
+    <p class="actions">
+      <a class="btn" href="{{ typing.windowsKeyboard.x64 }}" rel="noopener">Download the keyboard for Windows</a>
+    </p>
+    <p class="small"><a href="{{ typing.windowsKeyboard.arm64 }}" rel="noopener">For a Windows computer with an ARM processor, such as a Surface Pro X, download this version instead.</a> <a href="{{ typing.windowsKeyboard.reference }}" rel="noopener">Every combination the keyboard accepts<span class="sr-only"> (on GitHub, opens another site)</span></a>. The keyboard is the free, open source <a href="https://github.com/bkntr/tibetan-keyboard" rel="noopener">Tibetan EWTS Keyboard</a> by bkntr.</p>
+    {%- endif %}
+    {%- if d.notes.length %}
+    <ul class="notes">
+      {%- for n in d.notes %}<li>{{ n | inline | safe }}</li>{% endfor %}
+    </ul>
+    {%- endif %}
+    {%- if d.id == 'mac' %}
+    <div class="callout">
+      <h3>{{ typing.azerty.title }}</h3>
+      <p>{{ typing.azerty.body | inline | safe }}</p>
+      <table class="keys">
+        <thead><tr><th scope="col">To type</th><th scope="col">press the key marked</th></tr></thead>
+        <tbody>
+          {%- for k in typing.azerty.keys %}<tr><td><kbd>{{ k.type }}</kbd></td><td><span class="keycap">{{ k.press }}</span></td></tr>{% endfor %}
+        </tbody>
+      </table>
+      <p>{{ typing.azerty.after | inline | safe }}</p>
+    </div>
+    {%- endif %}
+    {%- if d.font %}
+    <div class="font-box">
+      <h3>{{ typing.font.title }}</h3>
+      <p>{{ typing.font.body }} {{ d.font }}</p>
+      <p class="actions"><a class="btn btn--outline" href="{{ '/downloads/Jomolhari-Regular.ttf' | url }}" download>{{ typing.font.button }}</a></p>
+      <p class="small">{{ typing.font.licence }} <a href="{{ '/downloads/Jomolhari-OFL.txt' | url }}">Read the licence</a>. Jomolhari is by Chris Fynn; this copy comes from Google Fonts.</p>
+    </div>
+    {%- endif %}
+  </section>
+  {%- endfor %}
+
+  <section class="device" id="cheat-sheet" aria-labelledby="cheat-heading">
+    <h2 id="cheat-heading">{{ typing.cheatSheet.title }}</h2>
+    <p class="device__lead">{{ typing.cheatSheet.body }}</p>
+    <p class="actions"><a class="btn" href="{{ '/downloads/wylie-cheat-sheet.pdf' | url }}" download>{{ typing.cheatSheet.button }}</a></p>
+    <p class="small">To practise, paste your Wylie into the <a href="https://www.lotsawahouse.org/Static/tools/ewts.html" rel="noopener">Lotsawa House Wylie converter</a>: nothing needs installing.</p>
+  </section>
+</section>

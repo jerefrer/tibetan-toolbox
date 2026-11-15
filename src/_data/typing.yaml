@@ -1,0 +1,81 @@
+# Content of the "Typing Tibetan" guide, ported from the classical Tibetan course site
+# (Padmakara, with Wulstan Fletcher). Wylie is marked with backticks and shown as keys;
+# **bold** is shown as strong text.
+credit: "Guide and videos by Frère Jérémy, from the classical Tibetan course organised by Padmakara and led by Wulstan Fletcher."
+videosChannel: https://www.youtube.com/@JeremyFrere
+windowsKeyboard:
+  x64: https://github.com/bkntr/tibetan-keyboard/releases/download/v0.2.3/tibetan-ewts-keyboard-0.2.3-windows-x64-setup.exe
+  arm64: https://github.com/bkntr/tibetan-keyboard/releases/download/v0.2.3/tibetan-ewts-keyboard-0.2.3-windows-arm64-setup.exe
+  reference: https://github.com/bkntr/tibetan-keyboard/blob/main/REFERENCE.md
+devices:
+  - id: mac
+    name: Mac
+    card: "Built in: nothing to install."
+    title: Typing Tibetan on a Mac
+    lead: "Nothing to install: the Tibetan keyboard is part of macOS."
+    video: { id: fhJL0PpgNT8, title: "How to Type Tibetan on a Mac – Built-in Wylie Keyboard + Tibetan Fonts" }
+    steps:
+      - "Open **System Settings**, then **Keyboard**. Under **Text Input**, choose **Input Sources**, then **Edit**."
+      - "Press **+**, search for Tibetan, choose **Tibetan – Wylie** and press **Add**."
+      - "Switch keyboards with the **globe key**, bottom left of your keyboard, or from the **keyboard menu** at the top of the screen."
+      - "Type: `sangs rgyas` becomes སངས་རྒྱས། **Switch back** before you answer an email!"
+    notes:
+      - "Lost? From the keyboard menu, choose **Show Keyboard Viewer**: it shows which key gives which letter."
+      - "Stacks that are not standard Tibetan, as in Sanskrit, need the **stacking key** between the letters: hold **Shift** and press **the key just left of Delete**, whatever is printed on it (on an English keyboard it is the + key). For instance: `pad`, then the stacking key, then `ma` gives པདྨ"
+    font: "Download the font, open the file, and press Install in the window that opens."
+  - id: windows
+    name: Windows
+    card: A small free program to install.
+    title: Typing Tibetan on Windows
+    lead: "A small free program, open source, that works in every application: Word, LibreOffice, your email, your browser."
+    video: { id: knunp4qDZZc, title: "How to Type Tibetan on Windows – Free Wylie Keyboard, Step by Step" }
+    steps:
+      - "**Download the keyboard** below and open the file."
+      - "Your browser and Windows will warn you about an unfamiliar program. Choose **Keep**, then **Keep anyway**; then **More info**, then **Run anyway**."
+      - "**Install it.** Ticking **Start automatically** and **Desktop shortcut** is a good idea."
+      - "Its icon, a Tibetan ཨོཾ, appears among the small icons at the **bottom right of the screen**, sometimes hidden behind the **^** arrow. Drag it out so that it stays in view."
+      - "Hold **Shift** and press **Space twice** to switch Tibetan on: the icon turns green. Do the same to switch it off."
+    notes:
+      - "Letters that should sit side by side but would stack, like the g and y of གཡས, are kept apart with a **dot**: `g.yas`."
+      - "Stacks that are not standard Tibetan, as in Sanskrit, are joined with a **+**. For instance: `pad+ma` gives པདྨ"
+    font: "Download the font, open the file, and press Install."
+  - id: ios
+    name: iPhone & iPad
+    card: Coming soon.
+    title: Typing Tibetan on an iPhone or iPad
+    lead: "iPhones and iPads come with a Tibetan keyboard, and already display Tibetan: there is no font to install. A video showing how to add the keyboard and use it is coming soon."
+    video: null
+    steps: []
+    notes: []
+    font: null
+  - id: android
+    name: Android
+    card: Coming soon.
+    title: Typing Tibetan on Android
+    lead: "Android phones already display Tibetan: there is no font to install. A video showing how to type it is coming soon."
+    video: null
+    steps: []
+    notes: []
+    font: null
+azerty:
+  title: On a French (AZERTY) keyboard
+  body: "The Mac's Tibetan keyboard follows the **English key positions**, not the letters printed on your keys. A few keys therefore type something other than their label:"
+  keys:
+    - { type: a, press: Q }
+    - { type: q, press: A }
+    - { type: z, press: W }
+    - { type: w, press: Z }
+    - { type: m, press: "," }
+    - { type: "'", press: ù }
+    - { type: ".", press: ":" }
+    - { type: "/", press: "!" }
+  after: "Every other letter is where you expect it. In doubt, **Show Keyboard Viewer** in the keyboard menu shows each key. The Windows keyboard follows the active layout, AZERTY included."
+font:
+  title: A Tibetan font
+  body: "The keyboard types the letters; a font draws them. Your computer already has one, but Jomolhari is clearer, and free."
+  button: Download the Jomolhari font
+  licence: Free to use and to share, under the SIL Open Font License.
+cheatSheet:
+  title: Wylie cheat sheet
+  body: What to type for each letter. The same on a Mac and on Windows, except where noted. Printable PDF from the course.
+  button: Download the cheat sheet (PDF)
