@@ -1,0 +1,79 @@
+name: Suggest a tool
+description: Suggest a free tool or library for Tibetan language or Tibetan Buddhist texts.
+title: "Suggest: "
+labels: ["tool suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. The directory lists tools that are free to use and whose description can be checked on the tool's own page. Please fill in what you know.
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Address (URL) where people can use or download it
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author or organisation
+      description: Who made it, so it can be credited.
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What does it do?
+      description: One or two sentences, in your own words.
+    validations:
+      required: true
+  - type: dropdown
+    id: need
+    attributes:
+      label: What is it for?
+      multiple: true
+      options:
+        - Type Tibetan
+        - Copy Tibetan from a PDF
+        - Phonetics or IAST
+        - Dictionaries
+        - Convert old documents
+        - Print or lay out pechas
+        - OCR
+        - Fonts
+        - Find and read texts
+        - Library for developers
+        - Something else
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Works on
+      options:
+        - label: Web browser
+        - label: Mac
+        - label: Windows
+        - label: iPhone or iPad
+        - label: Android
+  - type: checkboxes
+    id: facts
+    attributes:
+      label: Is it
+      options:
+        - label: Free to use
+        - label: Open source (please give the repository below)
+  - type: input
+    id: repo
+    attributes:
+      label: Source repository, if open source
+      placeholder: https://github.com/
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else

@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: Suggest a tool
+description: Know a free tool for Tibetan language or texts that belongs in the Tibetan Toolbox? Suggest it with a GitHub issue or by email.
+---
+<div class="wrap page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a> <span aria-hidden="true">/</span> <span>Suggest a tool</span></nav>
+  <h1 class="page__title">Suggest a tool</h1>
+  <div class="prose prose--lead">
+    <p>Know a free tool that people working with Tibetan would be glad to find? Tell us about it. The directory only lists tools that are free to use, that work, and whose description can be checked on the tool's own page.</p>
+  </div>
+  <section class="tool-section">
+    <h2>Option 1: open a GitHub issue</h2>
+    <p>The quickest way. The form asks for the tool's name, its address, who makes it, what it does and what it runs on.</p>
+    <p class="actions"><a class="btn" href="{{ site.issues }}" rel="noopener">Suggest a tool on GitHub</a></p>
+  </section>
+  <section class="tool-section">
+    <h2>Option 2: send a message</h2>
+    <p>No GitHub account? Use the contact form on the maintainer's site and say that it is about the Tibetan Toolbox.</p>
+    <p class="actions"><a class="btn btn--outline" href="{{ site.maintainer.contact }}" rel="noopener">Contact Frère Jérémy</a></p>
+  </section>
+  <section class="tool-section">
+    <h2>What helps</h2>
+    <ul class="notes">
+      <li>The address where people can use or download the tool, and where its source is, if it is open.</li>
+      <li>Who made it, so that it can be credited to them.</li>
+      <li>One or two sentences on what it does, in your own words.</li>
+      <li>The platforms it runs on, and whether it is free.</li>
+    </ul>
+    <p>You can also suggest a correction if a link has moved or a description is wrong.</p>
+  </section>
+</div>
