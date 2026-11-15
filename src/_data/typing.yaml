@@ -175,3 +175,6 @@ sheet:
     - { keys: space, from: " ", note: the dot between syllables }
     - { keys: "/", from: "/", note: "shad, at the end of a phrase" }
     - { keys: x, from: "", note: "an ordinary space, on Windows (also `_`)" }
+# The drawing of the Mac's stacking key (typing-device.njk, Mac page).
+stackingKey:
+  caption: "The stacking key: hold **Shift** and press **the key just left of Delete**, whatever is printed on it. On an English keyboard it is the + key."

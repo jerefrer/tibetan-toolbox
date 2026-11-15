@@ -23,6 +23,27 @@
 </ul>
 {%- endif %}
 {%- if d.id == 'mac' %}
+{#- Where the stacking key is, drawn: Shift plus the key just left of Delete. The key is the same place on every Mac keyboard (macOS maps keys by position), so the drawing leaves its label blank unless the browser can say it: see stacking-key.js. #}
+<figure class="keyfig" data-stacking-figure>
+  <svg class="keyfig__svg" viewBox="0 0 424 56" role="img" aria-label="Keyboard keys: Shift, then the key just left of Delete, highlighted">
+    <rect class="keyfig__hot" x="1" y="1" width="98" height="54" rx="8"/>
+    <text class="keyfig__hot-text" x="50" y="34" text-anchor="middle">&#8679; shift</text>
+    <text class="keyfig__plus" x="119" y="36" text-anchor="middle">+</text>
+    <rect class="keyfig__key" x="141" y="1" width="44" height="54" rx="8"/>
+    <text class="keyfig__text" x="163" y="34" text-anchor="middle">9</text>
+    <rect class="keyfig__key" x="191" y="1" width="44" height="54" rx="8"/>
+    <text class="keyfig__text" x="213" y="34" text-anchor="middle">0</text>
+    <rect class="keyfig__key" x="241" y="1" width="44" height="54" rx="8"/>
+    <text class="keyfig__text" data-minus-key x="263" y="34" text-anchor="middle"></text>
+    <rect class="keyfig__hot" x="291" y="1" width="44" height="54" rx="8"/>
+    <text class="keyfig__hot-text" data-stacking-key x="313" y="34" text-anchor="middle"></text>
+    <rect class="keyfig__key" x="341" y="1" width="82" height="54" rx="8"/>
+    <text class="keyfig__text" x="382" y="34" text-anchor="middle">delete</text>
+  </svg>
+  <figcaption>{{ typing.stackingKey.caption | inline | safe }}</figcaption>
+</figure>
+{%- endif %}
+{%- if d.id == 'mac' %}
 <div class="callout">
   <h3>{{ typing.azerty.title }}</h3>
   <p>{{ typing.azerty.body | inline | safe }}</p>

@@ -352,6 +352,16 @@ kbd {
   .sheet__source { display: block; }
 }
 
+/* Drawing of the Mac's stacking key */
+.keyfig { margin: 28px 0 0; padding: 20px 24px; max-width: 720px; background: var(--soft); border-radius: 16px; }
+.keyfig__svg { display: block; width: 100%; max-width: 440px; height: auto; font-family: var(--sans); }
+.keyfig__key { fill: var(--white); stroke: var(--field); stroke-width: 2; }
+.keyfig__text { fill: var(--muted); font-size: 18px; }
+.keyfig__hot { fill: var(--pill); stroke: var(--lapis); stroke-width: 2.5; }
+.keyfig__hot-text { fill: var(--lapis-dark); font-size: 18px; font-weight: 600; }
+.keyfig__plus { fill: var(--muted); font-size: 26px; }
+.keyfig figcaption { margin-top: 14px; line-height: 1.6; }
+
 /* Catalogue */
 .cat { padding-top: 32px; padding-bottom: 64px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
 .filters { flex: 1 1 220px; max-width: 260px; font-size: 15px; }
