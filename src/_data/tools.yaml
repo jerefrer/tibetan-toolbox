@@ -135,6 +135,19 @@
   repo: https://github.com/jerefrer/tibetan-ansi-to-unicode-app
   maintainer: jerefrer
 
+- id: tibetan-wylie-azerty
+  name: Tibetan – Wylie (AZERTY)
+  url: https://jerefrer.github.io/tibetan-wylie-azerty/
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: "Apple's Tibetan – Wylie keyboard for the Mac, rearranged for French (AZERTY) keyboards: every letter is typed from the key that carries it, and shortcuts work as they do in French. Install guide in French."
+  needs: [type-tibetan]
+  platforms: [mac]
+  free: true
+  openSource: true
+  developer: false
+  repo: https://github.com/jerefrer/tibetan-wylie-azerty
+  maintainer: jerefrer
+
 - id: indesign-scripts
   name: InDesign scripts for Tibetan booklets and pechas
   url: https://github.com/jerefrer/indesign-scripts-for-tibetan-booklets-and-pechas

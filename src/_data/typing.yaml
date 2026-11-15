@@ -61,7 +61,7 @@ devices:
     font: null
 azerty:
   title: On a French (AZERTY) keyboard
-  body: "The Mac's Tibetan keyboard follows the **English key positions**, not the letters printed on your keys. A few keys therefore type something other than their label:"
+  body: "The Mac's Tibetan keyboard follows the **English key positions**, not the letters printed on your keys."
   keys:
     - { type: a, press: Q }
     - { type: q, press: A }
@@ -71,6 +71,12 @@ azerty:
     - { type: "'", press: ù }
     - { type: ".", press: ":" }
     - { type: "/", press: "!" }
+  layout:
+    name: Tibetan – Wylie (AZERTY)
+    url: https://jerefrer.github.io/tibetan-wylie-azerty/
+    text: "The simplest: install this free keyboard. It is Apple's Tibetan – Wylie with every key following the letters printed on a French keyboard, so nothing below applies."
+    link: Download and install guide (in French)
+  afterLayout: "Or keep Apple's keyboard, and remember that a few keys differ:"
   after: "Every other letter is where you expect it. In doubt, **Show Keyboard Viewer** in the keyboard menu shows each key. The Windows keyboard follows the active layout, AZERTY included."
 font:
   title: A Tibetan font

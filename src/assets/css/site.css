@@ -247,6 +247,12 @@ kbd {
 .callout h3, .font-box h3 { font-size: 20px; margin-bottom: 8px; }
 .callout p, .font-box p { line-height: 1.6; }
 .callout p + *, .font-box p + * { margin-top: 12px; }
+.layout-pick { display: flex; gap: 14px; align-items: flex-start; margin: 4px 0 16px; padding: 14px 16px; background: var(--white); border: 1.5px solid var(--line); border-radius: 14px; text-decoration: none; color: var(--ink); }
+.layout-pick:hover { border-color: var(--lapis); color: var(--ink); }
+.layout-pick img { flex: none; border-radius: 11px; }
+.layout-pick > span { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.layout-pick span span { font-size: 15px; color: var(--muted); }
+.layout-pick .layout-pick__link { color: var(--lapis); font-weight: 600; }
 .keys { border-collapse: collapse; margin: 12px 0; }
 .keys th { text-align: left; font-weight: 600; font-size: 14px; color: var(--muted); padding: 0 32px 6px 0; }
 .keys td { padding: 4px 32px 4px 0; }
