@@ -89,3 +89,55 @@ cheatSheet:
   title: Wylie cheat sheet
   body: What to type for each letter. The same on a Mac and on Windows, except where noted. Printable PDF from the course.
   button: Download the cheat sheet (PDF)
+# The practice page (/type-tibetan/practice/). Copy is the course's, verbatim. `{wylie}` and `{n}`
+# are filled by src/assets/js/practice.js; Wylie between backticks is shown as keys.
+practice:
+  title: Practise
+  metaTitle: Practise typing Tibetan in Wylie
+  metaDescription: Practise Wylie online on any computer or phone, with nothing to install. Type Wylie and see Tibetan, then play a word game with hints.
+  crumb: Practise
+  card: Try Wylie here, on any computer or phone.
+  lead: "Try it here, with any keyboard: what you type in Wylie appears in Tibetan. Nothing needs installing."
+  freeLabel: Type in Wylie
+  freePlaceholder: sangs rgyas
+  gameTitle: Type the word
+  gameLead: "A word in Tibetan: type it in Wylie, every vowel included, and end with a space for the final tsheg. Stuck? Ask for a hint."
+  answerLabel: Your answer, in Wylie
+  position: "Word {n} of {total}"
+  previous: Previous word
+  hint: Hint
+  reveal: Show the answer
+  next: Next word
+  perfect: "Perfect!"
+  pressEnter: Press Enter for the next word.
+  noTsheg: "Correct! Just add a space for the final tsheg ་."
+  pressEnterAgain: Press Enter again for the next word.
+  missingVowel: "Almost: every syllable needs its vowel written. Type `{wylie}`."
+  notYet: "Not yet. Next, type `{wylie}`."
+  hintText: "Next, type `{wylie}`."
+  answerText: "Type `{wylie}`, then a space."
+  noScript: The practice needs JavaScript, which is switched off in this browser.
+  # Easiest first: one-letter syllables, then the standard stacks, then the dot and the plus.
+  words:
+    - { wylie: bod yig, meaning: Tibetan script }
+    - { wylie: chos, meaning: Dharma }
+    - { wylie: bla ma, meaning: "lama, teacher" }
+    - { wylie: sems can, meaning: sentient being }
+    - { wylie: rin po che, meaning: precious one }
+    - { wylie: sangs rgyas, meaning: Buddha }
+    - { wylie: "dge 'dun", meaning: Sangha }
+    - { wylie: dkon mchog gsum, meaning: the Three Jewels }
+    - { wylie: snying rje, meaning: compassion }
+    - { wylie: byams pa, meaning: loving-kindness }
+    - { wylie: shes rab, meaning: wisdom }
+    - { wylie: stong pa nyid, meaning: emptiness }
+    - { wylie: rdo rje, meaning: vajra }
+    - { wylie: "'od gsal", meaning: clear light }
+    - { wylie: bsod nams, meaning: merit }
+    - { wylie: "mkha' 'gro", meaning: ḍākinī }
+    - { wylie: "byang chub sems dpa'", meaning: bodhisattva }
+    - { wylie: bkra shis bde legs, meaning: good fortune (a greeting) }
+    - { wylie: thugs rje che, meaning: thank you }
+    - { wylie: g.yas g.yon, meaning: right and left }
+    - { wylie: pad+ma, meaning: lotus }
+    - { wylie: oM ma Ni pad+me hUM, meaning: the mantra of Avalokiteśvara }

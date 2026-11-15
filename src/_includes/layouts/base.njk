@@ -79,5 +79,8 @@
 {%- if scripts %}{% for s in scripts %}
   <script src="{{ s | url }}" defer></script>
 {%- endfor %}{% endif %}
+{%- if moduleScripts %}{% for s in moduleScripts %}
+  <script type="module" src="{{ s | url }}"></script>
+{%- endfor %}{% endif %}
 </body>
 </html>

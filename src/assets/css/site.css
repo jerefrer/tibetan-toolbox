@@ -26,6 +26,10 @@
   /* Platform badges, in the prayer-flag colours. */
   --os-mac: var(--saffron); --os-windows: var(--flag-blue); --os-ios: var(--flag-red); --os-android: var(--flag-green);
   --cloth-orange: #e0782c; --cloth-saffron: #e09a2c; --brocade-gold: #f2c94c;
+  /* Practice verdicts: right, right-but, not yet. Text tones are darker than the flags for contrast. */
+  --ok: var(--flag-green); --ok-bg: var(--flag-green-bg); --ok-ink: #145c3b;
+  --almost: var(--flag-yellow); --almost-bg: var(--flag-yellow-bg); --almost-ink: #6f4504;
+  --notyet: var(--flag-red); --notyet-bg: var(--flag-red-bg); --notyet-ink: #8f261c;
   --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   --bo: "Jomolhari", "Noto Serif Tibetan", serif;
 }
@@ -263,6 +267,49 @@ kbd {
 .keys th { text-align: left; font-weight: 600; font-size: 14px; color: var(--muted); padding: 0 32px 6px 0; }
 .keys td { padding: 4px 32px 4px 0; }
 .keycap { display: inline-flex; min-width: 40px; height: 36px; align-items: center; justify-content: center; border: 1.5px solid var(--field); border-radius: 8px; background: var(--white); padding: 0 8px; font-weight: 600; }
+
+/* Practice page: a free box that writes Tibetan as you type Wylie, and a word game */
+.practice { display: flex; flex-direction: column; gap: 40px; margin-top: 28px; }
+.practice__free { display: flex; flex-direction: column; gap: 10px; }
+.practice label { font-size: 18px; font-weight: 600; }
+.practice input[type="text"] {
+  width: 100%; font: inherit; font-size: 18px; padding: 13px 16px; color: var(--ink);
+  background: var(--white); border: 1.5px solid var(--field); border-radius: 10px;
+}
+.practice .practice__answer { border-width: 2px; transition: border-color .15s; }
+.practice .practice__answer.is-right { border-color: var(--ok); }
+.practice__out { font-family: var(--bo); color: var(--ink); line-height: 1.5; min-height: 1.6em; overflow-wrap: anywhere; }
+.practice__free .practice__out { font-size: 40px; }
+.practice__game { background: var(--soft); border-radius: 20px; padding: 28px 32px; }
+.practice__bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.practice__bar h2 { font-size: 24px; font-weight: 800; }
+.practice__pos { font-size: 14px; color: var(--muted); }
+.practice__lead { margin-top: 10px; color: var(--muted); line-height: 1.6; }
+.practice__target { margin-top: 20px; font-family: var(--bo); font-size: 60px; line-height: 1.4; color: var(--ink); overflow-wrap: anywhere; }
+.practice__meaning { margin-top: 2px; font-size: 18px; color: var(--muted); }
+.practice__field { margin-top: 22px; display: flex; flex-direction: column; gap: 10px; }
+.practice__field .practice__out { font-size: 32px; color: var(--muted); }
+/* The feedback keeps its room when empty, as tall as the longest verdict, so that a verdict
+   appearing does not push the buttons down the page. */
+.practice__feedback { min-height: 9rem; }
+.say { margin-top: 4px; display: flex; gap: 12px; padding: 12px 16px; font-size: 17px; line-height: 1.5; border-left: 4px solid var(--say); background: var(--say-bg); color: var(--say-ink); border-radius: 0 10px 10px 0; }
+.say--right { --say: var(--ok); --say-bg: var(--ok-bg); --say-ink: var(--ok-ink); }
+.say--almost { --say: var(--almost); --say-bg: var(--almost-bg); --say-ink: var(--almost-ink); }
+.say--notyet { --say: var(--notyet); --say-bg: var(--notyet-bg); --say-ink: var(--notyet-ink); }
+.say--note { --say: var(--field); --say-bg: var(--white); --say-ink: var(--ink); }
+.say__icon { flex: none; width: 20px; height: 20px; margin-top: 3px; }
+.say__text { display: flex; flex-direction: column; gap: 4px; }
+.say kbd { background: var(--white); }
+.practice__buttons { margin-top: 22px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+.practice__buttons > div { display: flex; flex-wrap: wrap; gap: 12px; }
+.practice__buttons .btn--outline { font-size: 16px; font-weight: 600; padding: 11px 18px; border-radius: 10px; border-color: var(--ink); }
+@media (max-width: 640px) {
+  .practice__game { padding: 22px 18px; }
+  .practice__target { font-size: 48px; }
+  .practice__free .practice__out { font-size: 34px; }
+  .practice__field .practice__out { font-size: 28px; }
+  .practice__feedback { min-height: 11rem; }
+}
 
 /* Catalogue */
 .cat { padding-top: 32px; padding-bottom: 64px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }

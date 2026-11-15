@@ -1,4 +1,5 @@
 import * as yaml from "js-yaml";
+import { fromWylie } from "./src/assets/js/ewts.js";
 
 export default function (eleventyConfig) {
   // Data files are YAML (Eleventy reads JSON and JS out of the box).
@@ -59,6 +60,10 @@ export default function (eleventyConfig) {
       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
       .replace(/`(.+?)`/g, "<kbd>$1</kbd>");
   });
+
+  // Wylie to Tibetan, with the converter the practice page runs in the browser, so that the cheat
+  // sheet drawn at build time cannot disagree with it.
+  eleventyConfig.addFilter("wylie", (text) => fromWylie(String(text)));
 
   return {
     pathPrefix: "/",

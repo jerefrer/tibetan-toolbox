@@ -1,0 +1,64 @@
+---
+layout: layouts/base.njk
+permalink: /type-tibetan/practice/index.html
+eleventyComputed:
+  title: "{{ typing.practice.metaTitle }}"
+  description: "{{ typing.practice.metaDescription }}"
+# The practice runs in the browser, on the same converter that draws the cheat sheet.
+moduleScripts:
+  - /assets/js/practice.js
+---
+{%- set p = typing.practice -%}
+{%- set first = p.words[0] -%}
+{%- set firstWylie = first.wylie + ' ' -%}
+{#- Everything the script needs: the copy and the words, read from this page and not fetched. #}
+{%- set practiceData = { copy: p, words: p.words } -%}
+<div class="wrap page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a> <span aria-hidden="true">/</span> <a href="{{ '/type-tibetan/' | url }}">Type Tibetan</a> <span aria-hidden="true">/</span> <span>{{ p.crumb }}</span></nav>
+  <h1 class="page__title">{{ p.title }}</h1>
+  <p class="device__lead">{{ p.lead }}</p>
+
+  <div class="practice" data-typing-practice>
+    <div class="practice__free">
+      <label for="typing-free">{{ p.freeLabel }}</label>
+      {#- The fields refuse everything a phone does to text unasked (capitals, corrections, suggestions): in Wylie a capital is a different letter. #}
+      <input id="typing-free" data-role="free-input" type="text" placeholder="{{ p.freePlaceholder }}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
+      {#- Its room is kept so that the page does not jump when the first letter arrives. #}
+      <p class="practice__out" data-role="free-output" lang="bo" aria-live="polite"></p>
+    </div>
+
+    {#- The game is a form: Enter submits it, and submitting is "check this", which moves on once the word is right. Nothing is posted. #}
+    <form class="practice__game" data-role="game" novalidate>
+      <div class="practice__bar">
+        <h2>{{ p.gameTitle }}</h2>
+        <span class="practice__pos" data-role="position">{{ p.position | replace('{n}', 1) | replace('{total}', p.words.length) }}</span>
+      </div>
+      <p class="practice__lead">{{ p.gameLead }}</p>
+      <noscript><p class="practice__lead">{{ p.noScript }}</p></noscript>
+
+      {#- Every word with its final tsheg, as it stands in a text. #}
+      <p class="practice__target" data-role="target" lang="bo">{{ firstWylie | wylie }}</p>
+      <p class="practice__meaning" data-role="meaning">{{ first.meaning }}</p>
+
+      <div class="practice__field">
+        <label for="typing-answer">{{ p.answerLabel }}</label>
+        <input id="typing-answer" class="practice__answer" data-role="answer" type="text" enterkeyhint="done" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
+        <p class="practice__out" data-role="answer-output" lang="bo"></p>
+        <div class="practice__feedback" data-role="feedback" role="status" aria-live="polite"></div>
+      </div>
+
+      <div class="practice__buttons">
+        <div>
+          <button type="button" class="btn btn--outline" data-role="hint">{{ p.hint }}</button>
+          <button type="button" class="btn btn--outline" data-role="reveal">{{ p.reveal }}</button>
+        </div>
+        <div>
+          <button type="button" class="btn btn--outline" data-role="previous"><span aria-hidden="true">&larr;</span> {{ p.previous }}</button>
+          <button type="button" class="btn" data-role="next">{{ p.next }} <span aria-hidden="true">&rarr;</span></button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script type="application/json" id="practice-data">{{ practiceData | jsonLd | safe }}</script>
+  <p class="note">New to Wylie? Start with the <a href="{{ '/type-tibetan/' | url }}">guide for your device</a>.</p>
+</div>
