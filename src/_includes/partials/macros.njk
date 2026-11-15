@@ -1,0 +1,40 @@
+{# A tool as a catalogue row. Developer libraries get the dashed card. #}
+{% macro toolCard(t, needs, platformList, showNeeds) %}
+{%- set isGithub = t.url | hostOf == "github.com" -%}
+<article class="tool{% if t.developer %} tool--dev{% endif %}" id="tool-{{ t.id }}"
+  data-id="{{ t.id }}"
+  data-needs="{{ t.needs | join(' ') }}"
+  data-platforms="{{ t.platforms | join(' ') }}"
+  data-free="{{ 'true' if t.free else 'false' }}"
+  data-open="{{ 'true' if t.openSource else 'false' }}"
+  data-dev="{{ 'true' if t.developer else 'false' }}">
+  <div class="tool__body">
+    <div class="tool__head">
+      <h3 class="tool__name">{{ t.name }}</h3>
+      <span class="tool__by">
+        {%- if t.developer -%}developer library{% if t.language %} · {{ t.language }}{% endif %} · {% endif -%}
+        by <a href="{{ t.author.url }}" rel="noopener">{{ t.author.name }}</a>
+      </span>
+    </div>
+    <p class="tool__desc">{{ t.description }}</p>
+    {% if not t.developer or t.platforms.length %}
+    <ul class="pills" aria-label="Details">
+      {%- for p in t.platforms %}{% for pl in platformList %}{% if pl.id == p %}<li>{{ pl.short }}</li>{% endif %}{% endfor %}{% endfor -%}
+      {%- if t.free %}<li>Free</li>{% endif -%}
+      {%- if t.openSource %}<li>Open source</li>{% endif -%}
+    </ul>
+    {% elif t.free or t.openSource %}
+    <ul class="pills" aria-label="Details">
+      {%- if t.free %}<li>Free</li>{% endif -%}
+      {%- if t.openSource %}<li>Open source</li>{% endif -%}
+    </ul>
+    {% endif %}
+    {% if showNeeds %}
+    <p class="tool__needs">{% for n in t.needs %}<a href="{{ ('/' + n + '/') | url }}">{{ n | needName(needs) }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+    {% endif %}
+  </div>
+  <a class="{{ 'tool__link' if t.developer or isGithub else 'btn' }}" href="{{ t.url }}" rel="noopener">
+    {%- if isGithub %}View on GitHub{% else %}Open{% endif %}<span class="sr-only"> {{ t.name }} (opens another site)</span>
+  </a>
+</article>
+{% endmacro %}

@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+title: Libraries for developers
+description: Open source libraries to build your own Tibetan tools - phonetics, transliteration, tokenizing, Unicode conversion, OCR and PDF repair.
+---
+{% from "partials/macros.njk" import toolCard %}
+{%- set libs = tools | devTools -%}
+<div class="wrap page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a> <span aria-hidden="true">/</span> <span>For developers</span></nav>
+  <h1 class="page__title">Libraries for developers</h1>
+  <div class="prose prose--lead">
+    <p>Open source libraries to build your own Tibetan tools: turning Tibetan into phonetics, transliterating mantras, splitting text into words, converting old fonts, repairing PDFs and running OCR.</p>
+    <p>Most of the first group are small JavaScript packages made by the site's maintainer, which power the web apps listed in the toolbox. The second group comes from other authors, such as OpenPecha and the Buddhist Digital Resource Center.</p>
+  </div>
+  <section class="tool-section" aria-labelledby="mine-heading">
+    <h2 id="mine-heading">By Frère Jérémy</h2>
+    <div class="tool-list">
+      {%- for t in libs %}{% if t.maintainer == 'jerefrer' %}{{ toolCard(t, needs, platforms, false) }}{% endif %}{% endfor %}
+    </div>
+  </section>
+  <section class="tool-section" aria-labelledby="others-heading">
+    <h2 id="others-heading">By other authors</h2>
+    <div class="tool-list">
+      {%- for t in libs %}{% if t.maintainer != 'jerefrer' %}{{ toolCard(t, needs, platforms, false) }}{% endif %}{% endfor %}
+    </div>
+  </section>
+  <p class="note">Know a library that belongs here? <a href="{{ '/suggest/' | url }}">Suggest it</a>.</p>
+</div>

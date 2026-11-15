@@ -1,0 +1,22 @@
+---
+permalink: /assets/tools.json
+eleventyExcludeFromCollections: true
+---
+[
+{%- for t in tools %}
+  {{ {
+    id: t.id,
+    name: t.name,
+    url: t.url,
+    author: t.author.name,
+    description: t.description,
+    needs: t.needs,
+    needNames: t.needs | needNames(needs),
+    platforms: t.platforms,
+    free: t.free,
+    openSource: t.openSource,
+    developer: t.developer,
+    language: t.language or ""
+  } | json | safe }}{% if not loop.last %},{% endif %}
+{%- endfor %}
+]

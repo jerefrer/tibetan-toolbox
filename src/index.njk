@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+title: Tibetan Toolbox - Free tools for Tibetan language and texts
+description: A neutral directory of free tools for people working with Tibetan - keyboards, dictionaries, phonetics, OCR, converters, pecha layout, fonts and libraries.
+isHome: true
+scripts:
+  - /assets/js/search.js
+  - /assets/js/home-search.js
+---
+<section class="hero wrap">
+  <h1>What do you want to do?</h1>
+  <p class="lead">Free tools for translators, editors and practitioners, chosen and kept up to date. Pick what you need, we'll show the tools that do it.</p>
+  <form class="hero-search" role="search" action="{{ '/all/' | url }}" method="get" data-index="{{ '/assets/tools.json' | url }}" data-all="{{ '/all/' | url }}">
+    <label class="sr-only" for="q">Search the toolbox</label>
+    <input id="q" name="q" type="search" placeholder="Search: phonetics, OCR, dictionary…" autocomplete="off" aria-controls="home-results">
+    <button class="btn hero-search__go" type="submit">Search</button>
+  </form>
+  <div id="home-results" class="home-results" aria-live="polite" hidden></div>
+</section>
+
+<section id="needs" class="wrap needs" aria-labelledby="needs-heading">
+  <h2 id="needs-heading" class="sr-only">Tools by need</h2>
+  <ul class="tiles">
+    {%- for n in needs %}
+    <li>
+      <a class="tile" href="{{ ('/' + n.slug + '/') | url }}">
+        <span class="tile__glyph{% if n.glyphTibetan %} tile__glyph--bo{% endif %}"{% if n.glyphTibetan %} lang="bo"{% endif %} aria-hidden="true">{{ n.glyph }}</span>
+        <strong>{{ n.name }}</strong>
+        <span class="tile__text">{{ n.tile }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="band" aria-labelledby="guide-heading">
+  <div class="wrap band__row">
+    <div class="band__text">
+      <span class="band__kicker">Guide</span>
+      <h2 id="guide-heading">Typing Tibetan with Wylie, on every device</h2>
+      <p>Step-by-step videos and downloads for Mac, Windows, iPhone and Android. From the classical Tibetan course organised by Padmakara and led by Wulstan Fletcher.</p>
+      <a class="btn btn--saffron" href="{{ '/type-tibetan/' | url }}">Open the guide</a>
+    </div>
+    <ul class="band__tiles">
+      {%- for d in typing.devices %}
+      <li><a href="{{ ('/type-tibetan/#' + d.id) | url }}"><span class="band__device">{{ d.name }}</span><span class="band__state">{% if d.video %}Video guide{% else %}Coming soon{% endif %}</span></a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="dev" class="wrap dev" aria-labelledby="dev-heading">
+  <div class="dev__intro">
+    <h2 id="dev-heading">For developers</h2>
+    <p>Open source libraries to build your own Tibetan tools.</p>
+    <p><a href="{{ '/developers/' | url }}">See all libraries</a></p>
+  </div>
+  <ul class="dev__list">
+    {%- for t in tools | teasers %}
+    <li><a href="{{ t.repo or t.url }}" rel="noopener"><strong>{{ t.name }}</strong></a> <span>{{ t.teaser }}</span></li>
+    {%- endfor %}
+  </ul>
+</section>

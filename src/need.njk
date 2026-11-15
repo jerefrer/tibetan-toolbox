@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: needs
+  size: 1
+  alias: need
+  addAllPagesToCollections: true
+permalink: "{{ need.slug }}/index.html"
+eleventyComputed:
+  title: "{{ need.title }}"
+  description: "{{ need.metaDescription }}"
+---
+{% from "partials/macros.njk" import toolCard %}
+{%- set matching = tools | toolsForNeed(need.id) -%}
+<div class="wrap page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a> <span aria-hidden="true">/</span> <span>{{ need.title }}</span></nav>
+  <h1 class="page__title">{{ need.title }}</h1>
+  <div class="prose prose--lead">
+    {%- for p in need.intro %}
+    <p>{{ p | inline | safe }}</p>
+    {%- endfor %}
+  </div>
+
+  {% if need.id == 'type-tibetan' %}{% include "partials/typing-guide.njk" %}{% endif %}
+
+  <section aria-labelledby="tools-heading" class="tool-section">
+    <h2 id="tools-heading">{% if need.id == 'type-tibetan' %}More ways to type and convert{% else %}Tools{% endif %}</h2>
+    <div class="tool-list">
+      {%- for t in matching | userTools %}{{ toolCard(t, needs, platforms, false) }}{% endfor %}
+      {%- for t in matching | devTools %}{{ toolCard(t, needs, platforms, false) }}{% endfor %}
+    </div>
+    <p class="note">Missing a tool? <a href="{{ '/suggest/' | url }}">Suggest it</a>. See also <a href="{{ '/all/' | url }}">all tools</a>.</p>
+  </section>
+</div>
