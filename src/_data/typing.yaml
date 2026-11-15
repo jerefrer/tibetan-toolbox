@@ -45,6 +45,7 @@ devices:
     name: iPhone & iPad
     card: Coming soon.
     title: Typing Tibetan on an iPhone or iPad
+    metaDescription: How to type Tibetan on an iPhone or iPad, which already come with a Tibetan keyboard and display Tibetan without a font to install.
     lead: "iPhones and iPads come with a Tibetan keyboard, and already display Tibetan: there is no font to install. A video showing how to add the keyboard and use it is coming soon."
     video: null
     steps: []
@@ -54,6 +55,7 @@ devices:
     name: Android
     card: Coming soon.
     title: Typing Tibetan on Android
+    metaDescription: How to type Tibetan on an Android phone or tablet, which already display Tibetan without a font to install.
     lead: "Android phones already display Tibetan: there is no font to install. A video showing how to type it is coming soon."
     video: null
     steps: []

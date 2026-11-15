@@ -7,13 +7,5 @@
   </ul>
   <p class="credit">{{ typing.credit }}</p>
 
-  {#- Platforms with a video have their own page; the others are described here. #}
-  {%- for d in typing.devices %}{% if not d.video %}
-  <section class="device" id="{{ d.id }}" aria-labelledby="{{ d.id }}-heading">
-    <h2 id="{{ d.id }}-heading">{{ d.title }}</h2>
-    {% include "partials/typing-device.njk" %}
-  </section>
-  {%- endif %}{% endfor %}
-
   {% include "partials/typing-cheat-sheet.njk" %}
 </section>

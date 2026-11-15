@@ -42,10 +42,8 @@ export default function (eleventyConfig) {
       return `<a${out}>`;
     });
   });
-  // Platforms with a video have their own page; the others are a section of /type-tibetan/.
-  eleventyConfig.addFilter("deviceHref", (device) =>
-    device.video ? `/type-tibetan/${device.id}/` : `/type-tibetan/#${device.id}`,
-  );
+  // Each platform has its own guide page.
+  eleventyConfig.addFilter("deviceHref", (device) => `/type-tibetan/${device.id}/`);
   // JSON for an inline <script type="application/ld+json"> block: "<" is escaped so that
   // no description can close the tag.
   eleventyConfig.addFilter("jsonLd", (value) => JSON.stringify(value).replace(/</g, "\\u003c"));
