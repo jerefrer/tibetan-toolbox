@@ -1,10 +1,10 @@
-// Tiny link checker for the built site: every internal href/src (with the /tibetan-toolbox/ prefix)
+// Tiny link checker for the built site: every internal href/src (site served at the domain root)
 // must resolve to a file in _site, and every #fragment must exist as an id in the target page.
 import { readdirSync, readFileSync, existsSync, statSync } from "node:fs";
 import { join, extname } from "node:path";
 
 const ROOT = "_site";
-const PREFIX = "/tibetan-toolbox/";
+const PREFIX = "/";
 const files = [];
 (function walk(dir) {
   for (const name of readdirSync(dir)) {

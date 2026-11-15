@@ -1,6 +1,6 @@
 # Tibetan Toolbox
 
-A public, neutral directory of free tools for people working with the Tibetan language and Tibetan Buddhist texts: translators, editors and practitioners. Live at <https://jerefrer.github.io/tibetan-toolbox/>.
+A public, neutral directory of free tools for people working with the Tibetan language and Tibetan Buddhist texts: translators, editors and practitioners. Live at <https://tibetantoolbox.org/>.
 
 Maintained by [Frère Jérémy](https://frerejeremy.me). Every tool belongs to its author; this site only links to them.
 
@@ -16,7 +16,7 @@ The "Type Tibetan" page includes a guide ported from the classical Tibetan cours
 
 ## Stack
 
-[Eleventy](https://www.11ty.dev/) 3, Nunjucks templates, YAML data in `src/_data/`, plain CSS and a little vanilla JavaScript for search and filters. Light theme only. Deployed to GitHub Pages by `.github/workflows/deploy.yml`, under the path prefix `/tibetan-toolbox/` (set in `eleventy.config.js`; every internal link uses Eleventy's `url` filter).
+[Eleventy](https://www.11ty.dev/) 3, Nunjucks templates, YAML data in `src/_data/`, plain CSS and a little vanilla JavaScript for search and filters. Light theme only. Deployed to GitHub Pages by `.github/workflows/deploy.yml`, on the custom domain tibetantoolbox.org (`src/CNAME`). Every internal link goes through Eleventy's `url` filter, so a path prefix can be set in `eleventy.config.js` if the site ever moves under one.
 
 ## Add a tool
 
@@ -49,10 +49,9 @@ Suggestions from visitors arrive as GitHub issues (`.github/ISSUE_TEMPLATE/sugge
 npm install
 npm run build        # writes _site/
 npm run check        # checks internal links and fragments in _site/
-npm start            # dev server (add --pathprefix=/tibetan-toolbox/ to match production)
+npm start            # dev server
 ```
 
-To preview under the production prefix, serve a folder that contains `tibetan-toolbox -> _site`, for example `python3 -m http.server` run in that parent folder, then open <http://localhost:8000/tibetan-toolbox/>.
 
 ## Files copied from the course site
 

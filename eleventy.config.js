@@ -7,6 +7,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/downloads": "downloads" });
   eleventyConfig.addPassthroughCopy({ "src/.nojekyll": ".nojekyll" });
+  // Custom domain for GitHub Pages.
+  eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
 
   eleventyConfig.addFilter("toolsForNeed", (tools, needId) =>
     tools.filter((tool) => tool.needs.includes(needId)),
@@ -39,7 +42,7 @@ export default function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/tibetan-toolbox/",
+    pathPrefix: "/",
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
     templateFormats: ["njk", "md"],
     htmlTemplateEngine: "njk",
