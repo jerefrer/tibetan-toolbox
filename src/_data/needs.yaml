@@ -65,6 +65,7 @@
   filter: Pechas & layout
   colour: red
   tile: Pecha Printer, plus InDesign and Word scripts for booklets.
+  toolOrder: [pecha-printer, nyingtik-booklet-printer, nyingtik-pecha-printer, indesign-scripts, word-scripts, ctan-pecha]
   title: Print or lay out pechas and booklets
   metaDescription: Tools for printing pecha PDFs and for laying out Tibetan pechas and booklets in InDesign, Word and LaTeX.
   intro:
