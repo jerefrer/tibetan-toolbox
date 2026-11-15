@@ -562,7 +562,7 @@
   free: true
   openSource: true
   developer: false
-  specimen: [320, 74]
+  specimen: [258, 60]
 
 - id: babelstone-tibetan
   name: BabelStone Tibetan
@@ -586,7 +586,7 @@
   free: true
   openSource: true
   developer: false
-  specimen: [309, 72]
+  specimen: [264, 62]
 
 - id: tibetan-machine-uni
   name: Tibetan Machine Uni
@@ -598,7 +598,7 @@
   free: true
   openSource: true
   developer: false
-  specimen: [166, 37]
+  specimen: [241, 53]
 
 # ---------------------------------------------------------------- Other authors: texts
 
