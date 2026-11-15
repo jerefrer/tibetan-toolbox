@@ -87,6 +87,7 @@
   filter: Fonts
   colour: yellow
   tile: Free Unicode fonts for reading and printing Tibetan.
+  toolOrder: [jomolhari, ddc-uchen, tibetan-machine-uni]
   title: Tibetan fonts
   metaDescription: A short list of free Unicode Tibetan fonts, each from its own author, with the licence the author gives.
   intro:

@@ -367,7 +367,7 @@
   url: https://digitaltibetan.github.io/DigitalTibetan/main.html
   author: { name: Digital Tibetan Community, url: https://digitaltibetan.github.io/DigitalTibetan/main.html }
   description: A community-run guide to using Tibetan on digital devices, with pages on keyboards, fonts, dictionaries, OCR, converting old Tibetan text and more. Still under development.
-  needs: [type-tibetan, convert-old-documents, ocr, fonts]
+  needs: [type-tibetan, convert-old-documents, ocr]
   platforms: [web]
   free: true
   openSource: false
