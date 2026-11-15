@@ -1,0 +1,17 @@
+{
+  "name": "tibetan-toolbox",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A public, neutral directory of free tools for Tibetan language and Tibetan Buddhist texts.",
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "check": "node scripts/check-links.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8",
+    "js-yaml": "5.5.0"
+  }
+}
