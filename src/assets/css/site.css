@@ -16,7 +16,7 @@
   --band-text: #c3c6d8;
   --focus: #8a5a00;
   --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --bo: "Noto Serif Tibetan", serif;
+  --bo: "Jomolhari", "Noto Serif Tibetan", serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
