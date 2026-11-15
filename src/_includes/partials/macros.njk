@@ -1,4 +1,6 @@
-{# A tool as a catalogue row. Developer libraries get the dashed card. #}
+{# A tool as a catalogue row. Developer libraries get the dashed card.
+   The whole card opens the tool: the name's link is stretched over it, and the
+   author and category links sit above it so that they still work. #}
 {% macro toolCard(t, needs, platformList, showNeeds) %}
 {%- set isGithub = t.url | hostOf == "github.com" -%}
 <article class="tool{% if t.developer %} tool--dev{% endif %}" id="tool-{{ t.id }}"
@@ -11,7 +13,7 @@
   <div class="tool__body">
     <div class="tool__head">
       <img class="tool__icon" src="{{ ('/assets/img/tools/' + t.id + '.png') | url }}" alt="" width="40" height="40" loading="lazy">
-      <h3 class="tool__name">{{ t.name }}</h3>
+      <h3 class="tool__name"><a class="tool__stretch" href="{{ t.url }}" rel="noopener">{{ t.name }}<span class="sr-only"> (opens another site)</span></a></h3>
       <span class="tool__by">
         {%- if t.developer -%}developer library{% if t.language %} · {{ t.language }}{% endif %} · {% endif -%}
         by <a href="{{ t.author.url }}" rel="noopener">{{ t.author.name }}</a>
@@ -37,8 +39,9 @@
     <p class="tool__needs">{% for n in t.needs %}<a href="{{ ('/' + n + '/') | url }}">{{ n | needName(needs) }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
     {% endif %}
   </div>
-  <a class="{{ 'tool__link' if t.developer or isGithub else 'btn' }}" href="{{ t.url }}" rel="noopener">
-    {%- if isGithub %}View on GitHub{% else %}Open{% endif %}<span class="sr-only"> {{ t.name }} (opens another site)</span>
-  </a>
+  {#- Kept as a visual cue; the name's link already covers the card. #}
+  <span class="{{ 'tool__link' if t.developer or isGithub else 'btn' }}" aria-hidden="true">
+    {%- if isGithub %}View on GitHub{% else %}Open{% endif -%}
+  </span>
 </article>
 {% endmacro %}

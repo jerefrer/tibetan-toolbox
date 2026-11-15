@@ -208,6 +208,16 @@ kbd {
 /* Tool cards */
 .tool-list { display: flex; flex-direction: column; gap: 14px; }
 .tool { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center; }
+.tool { position: relative; transition: border-color .15s; }
+.tool:hover { border-color: var(--lapis); }
+.tool:has(.tool__stretch:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+.tool__stretch { color: inherit; text-decoration: none; }
+.tool__stretch:focus-visible { outline: none; }
+.tool__stretch::after { content: ""; position: absolute; inset: 0; border-radius: 16px; }
+.tool:hover .tool__stretch { color: var(--lapis); }
+.tool:hover .btn { background: var(--lapis-dark); border-color: var(--lapis-dark); }
+.tool:hover .tool__link { text-decoration: underline; }
+.tool__by a, .tool__needs a { position: relative; z-index: 1; }
 .tool--dev { border: 1px dashed var(--field); }
 .tool__body { flex: 1 1 380px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .tool__head { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
