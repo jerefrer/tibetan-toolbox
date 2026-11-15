@@ -367,7 +367,7 @@
   url: https://digitaltibetan.github.io/DigitalTibetan/main.html
   author: { name: Digital Tibetan Community, url: https://digitaltibetan.github.io/DigitalTibetan/main.html }
   description: A community-run guide to using Tibetan on digital devices, with pages on keyboards, fonts, dictionaries, OCR, converting old Tibetan text and more. Still under development.
-  needs: [type-tibetan, dictionaries, convert-old-documents, ocr, fonts]
+  needs: [type-tibetan, convert-old-documents, ocr, fonts]
   platforms: [web]
   free: true
   openSource: false
@@ -480,7 +480,7 @@
   url: https://thlib.org/terms/#/translate/tibetan
   author: { name: Tibetan and Himalayan Library (THL), url: https://thlib.org/ }
   description: A look-up and translation tool in the Tibetan Terms section of the Tibetan and Himalayan Library, whose dictionary content comes with definitions, multimedia and pronunciation.
-  needs: [dictionaries]
+  needs: []
   platforms: [web]
   free: true
   openSource: false
@@ -645,7 +645,7 @@
   url: https://thlib.org/
   author: { name: Tibetan and Himalayan Library (THL), url: https://thlib.org/ }
   description: An open online library of texts, photographs, audio-video recordings and studies about the Tibetan plateau and the southern Himalayan regions. All content is open access.
-  needs: [find-texts, dictionaries]
+  needs: [find-texts]
   platforms: [web]
   free: true
   openSource: false

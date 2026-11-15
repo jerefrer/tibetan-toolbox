@@ -43,7 +43,7 @@
   filter: Dictionaries
   colour: yellow
   tile: Tibetan Translator gathers the major dictionaries in one search.
-  toolOrder: [tibetan-translator, steinert-dictionary, dharmamitra, monlam-ai, thl]
+  toolOrder: [tibetan-translator, steinert-dictionary, dharmamitra, monlam-ai]
   title: Look up a word
   metaDescription: Online and offline Tibetan dictionaries and word look-up tools for translators and students.
   intro:
