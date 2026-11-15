@@ -4,6 +4,7 @@
 #           platforms (web | mac | windows | ios | android), free, openSource, developer
 # Optional: repo (source URL), language (libraries), maintainer: jerefrer (the site's maintainer's own tools),
 #           teaser: "short note" (lists the library in the home page's developer teaser)
+#           stack: [javascript, python] (language logos shown next to the teaser)
 # Keep descriptions to what the tool's own page or README says.
 
 # ---------------------------------------------------------------- Frère Jérémy: tools
@@ -127,7 +128,8 @@
   language: JavaScript
   repo: https://github.com/jerefrer/tibetan-to-phonetics
   maintainer: jerefrer
-  teaser: "JS"
+  teaser: "Tibetan to phonetics"
+  stack: [javascript]
 
 - id: tibetan-word-tokenizer
   name: tibetan-word-tokenizer
@@ -143,6 +145,7 @@
   repo: https://github.com/jerefrer/tibetan-word-tokenizer
   maintainer: jerefrer
   teaser: "JS port of Botok"
+  stack: [javascript]
 
 - id: tibetan-syllable-parser
   name: tibetan-syllable-parser
@@ -157,7 +160,8 @@
   language: JavaScript
   repo: https://github.com/jerefrer/tibetan-syllable-parser
   maintainer: jerefrer
-  teaser: "JS"
+  teaser: "Syllable structure"
+  stack: [javascript]
 
 - id: tibetan-normalizer
   name: tibetan-normalizer
@@ -242,7 +246,8 @@
   language: Python
   repo: https://github.com/jerefrer/tibetan-sanskrit-transliteration
   maintainer: jerefrer
-  teaser: "JS · Python"
+  teaser: "Mantras to IAST"
+  stack: [javascript, python]
 
 - id: tibetan-sanskrit-transliteration-data
   name: tibetan-sanskrit-transliteration-data
@@ -272,6 +277,7 @@
   repo: https://github.com/jerefrer/TibetanOCR
   maintainer: jerefrer
   teaser: "OCR pipeline"
+  stack: [python]
 
 # ---------------------------------------------------------------- Other authors: type Tibetan
 
@@ -335,6 +341,7 @@
   language: Python
   repo: https://github.com/OpenPecha/pdf-cmap-fix
   teaser: "OpenPecha"
+  stack: [python]
 
 - id: py-tiblegenc
   name: py-tiblegenc

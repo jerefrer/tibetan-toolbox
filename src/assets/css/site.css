@@ -15,6 +15,8 @@
   --band: #262a44;
   --band-text: #c3c6d8;
   --focus: #8a5a00;
+  --js-yellow: #f7df1e;
+  --py-blue: #3776ab;
   /* Need tiles take four of the five prayer-flag colours. */
   --flag-blue: #2f63c9; --flag-blue-bg: #eaf0fc; --flag-blue-tint: #c9d7f4;
   --flag-red: #d0473a; --flag-red-bg: #fcecea; --flag-red-tint: #f6c9c3;
@@ -148,10 +150,19 @@ kbd {
 .dev__intro { flex: 1 1 340px; display: flex; flex-direction: column; gap: 10px; }
 .dev__intro h2 { font-size: 30px; font-weight: 800; }
 .dev__intro p { font-size: 17px; color: var(--muted); }
-.dev__list { flex: 2 1 560px; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 32px; font-size: 16px; }
+.dev__list { flex: 2 1 560px; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 32px; font-size: 16px; }
 .dev__list a { text-decoration: none; color: var(--ink); }
 .dev__list a:hover strong { text-decoration: underline; }
-.dev__list span { color: var(--muted); }
+.dev__list li { display: flex; gap: 12px; align-items: center; }
+.dev__item { display: flex; flex-direction: column; min-width: 0; }
+.dev__teaser { color: var(--muted); font-size: 15px; }
+.dev__stack { flex: none; width: 48px; display: flex; gap: 4px; }
+.stack-icon { width: 22px; height: 22px; display: block; }
+.stack-icon--js .stack-icon__back { fill: var(--ink); }
+.stack-icon--js .stack-icon__mark { fill: var(--js-yellow); }
+.stack-icon--py .stack-icon__mark { fill: var(--py-blue); }
+.dev__heading { display: flex; align-items: center; gap: 12px; }
+.gh-icon { width: 30px; height: 30px; flex: none; }
 
 /* Inner pages */
 .page { padding-top: 8px; padding-bottom: 72px; max-width: 920px; }

@@ -51,13 +51,13 @@ scripts:
 
 <section id="dev" class="wrap dev" aria-labelledby="dev-heading">
   <div class="dev__intro">
-    <h2 id="dev-heading">For developers</h2>
+    <h2 id="dev-heading" class="dev__heading">{% include "icons/github.svg" %}For developers</h2>
     <p>Open source libraries to build your own Tibetan tools.</p>
     <p><a href="{{ '/developers/' | url }}">See all libraries</a></p>
   </div>
   <ul class="dev__list">
     {%- for t in tools | teasers %}
-    <li><a href="{{ t.repo or t.url }}" rel="noopener"><strong>{{ t.name }}</strong></a> <span>{{ t.teaser }}</span></li>
+    <li><span class="dev__stack">{% for lang in t.stack %}{% include "icons/stack/" + lang + ".svg" %}{% endfor %}</span><span class="dev__item"><a href="{{ t.repo or t.url }}" rel="noopener"><strong>{{ t.name }}</strong></a><span class="dev__teaser">{{ t.teaser }}</span></span></li>
     {%- endfor %}
   </ul>
 </section>
