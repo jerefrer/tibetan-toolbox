@@ -232,6 +232,11 @@ kbd {
 .platform-switch a[aria-current="page"] { background: var(--lapis); border-color: var(--lapis); color: var(--white); }
 .platform-switch .band__os { width: 18px; height: 18px; margin: 0; color: currentColor; }
 .device--page { margin-top: 0; }
+.cheat-card { display: flex; flex-wrap: wrap; gap: 24px 36px; align-items: center; background: var(--soft); border-radius: 20px; padding: 28px 32px; max-width: 900px; }
+.cheat-card__text { flex: 1 1 360px; min-width: 0; }
+.cheat-card__thumb { flex: none; display: block; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 2px rgb(23 25 43 / 0.08), 0 8px 24px rgb(23 25 43 / 0.12); transform: rotate(2deg); transition: transform .15s; }
+.cheat-card__thumb:hover { transform: rotate(0deg) scale(1.02); }
+.cheat-card__thumb img { display: block; width: 182px; height: auto; }
 .credit { margin-top: 16px; font-size: 14px; color: var(--muted); }
 .device { margin-top: 56px; scroll-margin-top: 16px; }
 .device h2 { margin-bottom: 8px; }
