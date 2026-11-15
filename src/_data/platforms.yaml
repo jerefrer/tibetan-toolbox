@@ -1,0 +1,5 @@
+- { id: web, name: Web browser, short: Web }
+- { id: mac, name: Mac, short: Mac }
+- { id: windows, name: Windows, short: Windows }
+- { id: ios, name: iPhone & iPad, short: iOS }
+- { id: android, name: Android, short: Android }

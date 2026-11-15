@@ -1,0 +1,102 @@
+# One entry per need page. `filter` is the short label used in the catalogue sidebar.
+- id: type-tibetan
+  slug: type-tibetan
+  name: Type Tibetan
+  filter: Type Tibetan
+  glyph: ཀ་ཁ་ག
+  glyphTibetan: true
+  tile: Wylie keyboards on Mac, Windows, iPhone and Android, with video guides.
+  title: Type Tibetan
+  metaDescription: How to type Tibetan on Mac, Windows, iPhone and Android using Wylie, with video guides, downloads and a cheat sheet, plus other keyboards and converters.
+  intro:
+    - "You do not need a special keyboard to write Tibetan. The simplest way is to type in Wylie, the standard way of spelling Tibetan with Latin letters, and let the computer turn it into Tibetan script: type `sangs rgyas` and you get སངས་རྒྱས། **If you can spell a word, you can type it.**"
+    - "Start with the guide for your device below. After it come other keyboards and converters."
+- id: copy-from-pdf
+  slug: copy-from-pdf
+  name: Copy Tibetan from a PDF
+  filter: Copy from PDFs
+  glyph: PDF
+  tile: Easy Tibetan Copy turns broken text into correct Unicode.
+  title: Copy and search Tibetan in PDFs
+  metaDescription: Tools that make Tibetan in PDFs copyable and searchable as correct Unicode, instead of gibberish.
+  intro:
+    - "Many Tibetan PDFs look perfect on screen but fall apart when you select the text: copying gives gibberish and searching finds nothing. That is because the PDF stores the letters in a legacy encoding, or without telling the computer which Unicode character each shape stands for."
+    - "These tools repair the PDF or extract clean Unicode from it, so you can copy, search and paste the Tibetan."
+- id: phonetics-iast
+  slug: phonetics-iast
+  name: Get phonetics or IAST
+  filter: Phonetics & IAST
+  glyph: ā ṃ
+  tile: Tibetan to Phonetics, and Mantra to IAST & Phonetics.
+  title: Phonetics and IAST
+  metaDescription: Tools that turn Tibetan script into readable phonetics, Wylie, or IAST transliteration for Sanskrit mantras.
+  intro:
+    - "To chant a prayer, you often need to know how the Tibetan is pronounced. Phonetics tools turn Tibetan script into letters a reader of English can pronounce; Wylie is a scholarly transliteration of the Tibetan spelling itself."
+    - "Mantras are different: they are Sanskrit written in Tibetan letters. IAST is the standard scholarly way of writing Sanskrit with Latin letters, and a few tools below convert Tibetan mantras straight into it."
+- id: dictionaries
+  slug: dictionaries
+  name: Look up a word
+  filter: Dictionaries
+  glyph: ཚིག་མཛོད།
+  glyphTibetan: true
+  tile: Tibetan Translator gathers the major dictionaries in one search.
+  title: Look up a word
+  metaDescription: Online and offline Tibetan dictionaries and word look-up tools for translators and students.
+  intro:
+    - "Looking up Tibetan words means choosing among many dictionaries, each with its own coverage and terminology. The tools below put one or several of them behind a single search box."
+- id: convert-old-documents
+  slug: convert-old-documents
+  name: Convert old documents
+  filter: Convert old fonts
+  glyph: A→U
+  tile: ANSI fonts (TibetanChogyal and others) to Unicode.
+  title: Convert old documents to Unicode
+  metaDescription: Tools that convert old Tibetan documents written in legacy (ANSI) fonts such as TibetanChogyal to Unicode.
+  intro:
+    - "Before Unicode, Tibetan was typed with special fonts that put Tibetan shapes where Latin letters normally sit. Open such a document without the font and you see random English or symbols; even with the font installed, the text cannot be searched or moved to another program."
+    - "Converters read those old documents and give you proper Unicode Tibetan. They are matched to particular fonts, so check the result against the original."
+- id: pechas-layout
+  slug: pechas-layout
+  name: Print or lay out pechas
+  filter: Pechas & layout
+  glyph: ▤
+  tile: Pecha Printer, plus InDesign and Word scripts for booklets.
+  title: Print or lay out pechas and booklets
+  metaDescription: Tools for printing pecha PDFs and for laying out Tibetan pechas and booklets in InDesign, Word and LaTeX.
+  intro:
+    - "A pecha is a loose-leaf Tibetan book: long, narrow pages held between boards. Printing one at home means getting the pages in the right order and size; laying one out means setting long Tibetan lines in a program built for a different kind of page."
+    - "Some tools below prepare existing PDFs for printing. Others automate the repetitive work of laying out pechas and booklets."
+- id: ocr
+  slug: ocr
+  name: Recognise text in scans
+  filter: OCR
+  glyph: OCR
+  tile: Turn scans and photos of Tibetan pages into editable text.
+  title: Recognise text in scans
+  metaDescription: Tools for Tibetan OCR - turning scans and photographs of Tibetan pages into editable, searchable Unicode text.
+  intro:
+    - "OCR (optical character recognition) reads a scan or a photograph of a printed page and gives you the text. Tibetan is hard for it: stacked letters, woodblock prints and handwritten scripts all need dedicated models."
+    - "The tools below are dedicated to Tibetan or built from Tibetan-trained models. Results vary a lot with the print and the scan quality, so plan to proofread."
+- id: fonts
+  slug: fonts
+  name: Tibetan fonts
+  filter: Fonts
+  glyph: ཨ
+  glyphTibetan: true
+  tile: Free Unicode fonts for reading and printing Tibetan.
+  title: Tibetan fonts
+  metaDescription: A short list of free Unicode Tibetan fonts, each from its own author, with the licence the author gives.
+  intro:
+    - "A font draws the letters your keyboard types. Every modern computer has one for Tibetan, but free third-party fonts can be clearer, or give you a different style of Uchen for printing."
+    - "All fonts here are Unicode fonts, so the text stays searchable and portable. These tools belong to their authors; check each page for its licence before using a font in a publication."
+- id: find-texts
+  slug: find-texts
+  name: Find and read texts
+  filter: Texts & libraries
+  glyph: དཔེ་ཆ།
+  glyphTibetan: true
+  tile: Libraries and archives of Tibetan texts and translations.
+  title: Find and read texts
+  metaDescription: Libraries and archives of Tibetan Buddhist texts, translations and reference material that are free to read online.
+  intro:
+    - "Where do the texts themselves live? These libraries and archives hold Tibetan originals, scans and translations that anyone can read online."

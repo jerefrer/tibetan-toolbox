@@ -1,0 +1,609 @@
+# The single source of truth for every tool in the directory.
+#
+# Required: id, name, url, author {name, url}, description, needs (ids from needs.yaml),
+#           platforms (web | mac | windows | ios | android), free, openSource, developer
+# Optional: repo (source URL), language (libraries), maintainer: jerefrer (the site's maintainer's own tools),
+#           teaser: "short note" (lists the library in the home page's developer teaser)
+# Keep descriptions to what the tool's own page or README says.
+
+# ---------------------------------------------------------------- Frère Jérémy: tools
+
+- id: tibetan-translator
+  name: Tibetan Translator
+  url: https://jerefrer.github.io/tibetan-translator/
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Gives access to the best Tibetan dictionaries in one pleasant interface. Supports Wylie, phonetic search and assisted sentence splitting, and works offline.
+  needs: [dictionaries]
+  platforms: [web, mac, windows]
+  free: true
+  openSource: true
+  developer: false
+  repo: https://github.com/jerefrer/tibetan-translator
+  maintainer: jerefrer
+
+- id: easy-tibetan-copy
+  name: Easy Tibetan Copy
+  url: https://buda-base.github.io/easy-tibetan-copy/
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Drop a PDF, Word or RTF file and get correct Unicode Tibetan back, ready to copy, paste and search. Everything runs in your browser and the file never leaves your device.
+  needs: [copy-from-pdf, convert-old-documents]
+  platforms: [web]
+  free: true
+  openSource: true
+  developer: false
+  repo: https://github.com/buda-base/easy-tibetan-copy
+  maintainer: jerefrer
+
+- id: pecha-printer
+  name: Pecha Printer
+  url: https://pecha-printer.frerejeremy.me
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Prints your pecha PDFs so that you cut and stack them only once, instead of reordering pages by hand. Several pecha pages per A4 or A3 sheet.
+  needs: [pechas-layout]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+  repo: https://github.com/jerefrer/pecha-printer
+  maintainer: jerefrer
+
+- id: tibetan-to-phonetics-app
+  name: Tibetan to Phonetics
+  url: https://jerefrer.github.io/tibetan-to-phonetics-app/
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Converts Tibetan script into phonetics with customizable sets of rules. A compare page shows the differences between your existing phonetics and the generated ones.
+  needs: [phonetics-iast]
+  platforms: [web]
+  free: true
+  openSource: true
+  developer: false
+  repo: https://github.com/jerefrer/tibetan-to-phonetics-app
+  maintainer: jerefrer
+
+- id: mantra-to-iast-app
+  name: Tibetan Mantra to IAST & Phonetics
+  url: https://mantra-transliterator.frerejeremy.me/
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Transliterates mantras written in Tibetan script into IAST and phonetics. Also compares an existing transliteration with the generated one.
+  needs: [phonetics-iast]
+  platforms: [web]
+  free: true
+  openSource: true
+  developer: false
+  repo: https://github.com/jerefrer/tibetan-mantra-to-iast-and-phonetics-app
+  maintainer: jerefrer
+
+- id: tibetan-ansi-to-unicode-app
+  name: Tibetan ANSI to Unicode
+  url: https://tibetan-ansi-to-unicode.frerejeremy.me/
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Converts ANSI Tibetan from the TibetanChogyal font to Unicode. Almost all Tibetan characters are handled; only a few Sanskrit characters are.
+  needs: [convert-old-documents]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+  repo: https://github.com/jerefrer/tibetan-ansi-to-unicode-app
+  maintainer: jerefrer
+
+- id: indesign-scripts
+  name: InDesign scripts for Tibetan booklets and pechas
+  url: https://github.com/jerefrer/indesign-scripts-for-tibetan-booklets-and-pechas
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: A collection of Adobe InDesign scripts for working with Tibetan booklets and pechas, such as inserting phonetics, interweaving lines from files and generating tables of contents and bookmarks.
+  needs: [pechas-layout]
+  platforms: [mac, windows]
+  free: true
+  openSource: false
+  developer: false
+  repo: https://github.com/jerefrer/indesign-scripts-for-tibetan-booklets-and-pechas
+  maintainer: jerefrer
+
+- id: word-scripts
+  name: Word scripts for Tibetan booklets and pechas
+  url: https://github.com/jerefrer/word-scripts
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Dozens of scripts for working with Tibetan booklets and pechas in Word documents, for instance fixing broken stackings and spaces in Tibetan text.
+  needs: [pechas-layout]
+  platforms: []
+  free: true
+  openSource: false
+  developer: false
+  repo: https://github.com/jerefrer/word-scripts
+  maintainer: jerefrer
+
+# ---------------------------------------------------------------- Frère Jérémy: developer libraries
+
+- id: tibetan-to-phonetics
+  name: tibetan-to-phonetics
+  url: https://github.com/jerefrer/tibetan-to-phonetics
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Converts Tibetan Unicode text into phonetics based on customizable sets of rules. The engine behind the Tibetan to Phonetics web app.
+  needs: [phonetics-iast]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: JavaScript
+  repo: https://github.com/jerefrer/tibetan-to-phonetics
+  maintainer: jerefrer
+  teaser: "JS"
+
+- id: tibetan-word-tokenizer
+  name: tibetan-word-tokenizer
+  url: https://github.com/jerefrer/tibetan-word-tokenizer
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: A JavaScript port of Botok, OpenPecha's Tibetan word tokenizer, with Sanskrit detection. Runs in Node.js with no dependencies. The linguistic work and the dictionary are by the Botok team at OpenPecha.
+  needs: [find-texts]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: JavaScript
+  repo: https://github.com/jerefrer/tibetan-word-tokenizer
+  maintainer: jerefrer
+  teaser: "JS port of Botok"
+
+- id: tibetan-syllable-parser
+  name: tibetan-syllable-parser
+  url: https://github.com/jerefrer/tibetan-syllable-parser
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Deconstructs a single Unicode Tibetan syllable into its parts - prefix, superscribed, root, subscribed, vowel, suffix and more.
+  needs: [phonetics-iast]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: JavaScript
+  repo: https://github.com/jerefrer/tibetan-syllable-parser
+  maintainer: jerefrer
+  teaser: "JS"
+
+- id: tibetan-normalizer
+  name: tibetan-normalizer
+  url: https://github.com/jerefrer/tibetan-normalizer
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: A simple tool to normalize Tibetan Unicode strings.
+  needs: [convert-old-documents]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: JavaScript
+  repo: https://github.com/jerefrer/tibetan-normalizer
+  maintainer: jerefrer
+
+- id: tibetan-regexps
+  name: tibetan-regexps
+  url: https://github.com/jerefrer/tibetan-regexps
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Useful regular expressions for dealing with Unicode Tibetan, such as splitting a text into Tibetan groups or recognizing punctuation.
+  needs: [find-texts]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: JavaScript
+  repo: https://github.com/jerefrer/tibetan-regexps
+  maintainer: jerefrer
+
+- id: tibetan-ansi-to-unicode
+  name: tibetan-ansi-to-unicode
+  url: https://github.com/jerefrer/tibetan-ansi-to-unicode
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Converts old Tibetan fonts to Unicode. Includes a command-line tool that converts Word and RTF files while keeping their formatting.
+  needs: [convert-old-documents]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: JavaScript
+  repo: https://github.com/jerefrer/tibetan-ansi-to-unicode
+  maintainer: jerefrer
+
+- id: tibetan-unicode-converter
+  name: tibetan-unicode-converter
+  url: https://github.com/jerefrer/tibetan-unicode-converter
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: A JavaScript library to convert ANSI-encoded Tibetan text to Unicode, usable as an ES module, in CommonJS or directly in the browser.
+  needs: [convert-old-documents]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: JavaScript
+  repo: https://github.com/jerefrer/tibetan-unicode-converter
+  maintainer: jerefrer
+
+- id: tibetan-mantra-to-iast-and-phonetics
+  name: tibetan-mantra-to-iast-and-phonetics
+  url: https://github.com/jerefrer/tibetan-mantra-to-iast-and-phonetics
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Converts mantras from Unicode Tibetan into IAST and phonetics. Available on npm.
+  needs: [phonetics-iast]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: JavaScript
+  repo: https://github.com/jerefrer/tibetan-mantra-to-iast-and-phonetics
+  maintainer: jerefrer
+
+- id: tibetan-sanskrit-transliteration
+  name: tibetan-sanskrit-transliteration
+  url: https://github.com/jerefrer/tibetan-sanskrit-transliteration
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: A Python library that transliterates Tibetan-encoded Sanskrit mantras into IAST and phonetics. Shares its data with the JavaScript version.
+  needs: [phonetics-iast]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: Python
+  repo: https://github.com/jerefrer/tibetan-sanskrit-transliteration
+  maintainer: jerefrer
+  teaser: "JS · Python"
+
+- id: tibetan-sanskrit-transliteration-data
+  name: tibetan-sanskrit-transliteration-data
+  url: https://github.com/jerefrer/tibetan-sanskrit-transliteration-data
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: The shared replacement-map data (Tibetan, IAST, phonetics) used by the JavaScript and Python transliteration libraries. Published for both npm and Python.
+  needs: [phonetics-iast]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: JavaScript, Python
+  repo: https://github.com/jerefrer/tibetan-sanskrit-transliteration-data
+  maintainer: jerefrer
+
+- id: tibetan-ocr
+  name: TibetanOCR
+  url: https://github.com/jerefrer/TibetanOCR
+  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  description: Scripts that run Tibetan OCR on images and PDFs through Google Drive and write the result as text and Word files. Includes a quick-snip shortcut for macOS. Needs your own Google API credentials.
+  needs: [ocr]
+  platforms: [mac, windows]
+  free: true
+  openSource: false
+  developer: true
+  language: Python, shell
+  repo: https://github.com/jerefrer/TibetanOCR
+  maintainer: jerefrer
+  teaser: "OCR pipeline"
+
+# ---------------------------------------------------------------- Other authors: type Tibetan
+
+- id: bkntr-tibetan-keyboard
+  name: Tibetan EWTS Keyboard
+  url: https://github.com/bkntr/tibetan-keyboard
+  author: { name: bkntr, url: https://github.com/bkntr }
+  description: A configurable Wylie (EWTS) Tibetan keyboard for Windows. Type in Wylie and get Tibetan script in any application.
+  needs: [type-tibetan]
+  platforms: [windows]
+  free: true
+  openSource: true
+  developer: false
+  repo: https://github.com/bkntr/tibetan-keyboard
+
+- id: lotsawa-ewts
+  name: Wylie - Unicode converter
+  url: https://www.lotsawahouse.org/Static/tools/ewts.html
+  author: { name: Lotsawa House, url: https://www.lotsawahouse.org/ }
+  description: Converts in both directions between the Extended Wylie Transcription Scheme (EWTS) and Tibetan Unicode script. Paste, convert, copy.
+  needs: [type-tibetan]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: gboard
+  name: Gboard
+  url: https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin
+  author: { name: Google, url: https://www.google.com/ }
+  description: Google's keyboard app. According to the Digital Tibetan guide, its Tibetan keyboard is available on Android but not in the iOS version.
+  needs: [type-tibetan]
+  platforms: [android]
+  free: true
+  openSource: false
+  developer: false
+
+- id: digital-tibetan
+  name: Digital Tibetan
+  url: https://digitaltibetan.github.io/DigitalTibetan/main.html
+  author: { name: Digital Tibetan Community, url: https://digitaltibetan.github.io/DigitalTibetan/main.html }
+  description: A community-run guide to using Tibetan on digital devices, with pages on keyboards, fonts, dictionaries, OCR, converting old Tibetan text and more. Still under development.
+  needs: [type-tibetan, dictionaries, convert-old-documents, ocr, fonts]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+# ---------------------------------------------------------------- Other authors: PDFs, conversion, OCR
+
+- id: pdf-cmap-fix
+  name: pdf-cmap-fix
+  url: https://github.com/OpenPecha/pdf-cmap-fix
+  author: { name: OpenPecha, url: https://openpecha.org }
+  description: Fixes incorrect or incomplete PDF ToUnicode maps so that text extraction, search and copy-paste return correct Unicode. Primarily for Tibetan stacked syllables in Monlam, Himalaya and Jomolhari fonts, and for some legacy fonts.
+  needs: [copy-from-pdf, convert-old-documents]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: Python
+  repo: https://github.com/OpenPecha/pdf-cmap-fix
+  teaser: "OpenPecha"
+
+- id: py-tiblegenc
+  name: py-tiblegenc
+  url: https://github.com/buda-base/py-tiblegenc
+  author: { name: Buddhist Digital Resource Center (BDRC), url: https://www.bdrc.io/ }
+  description: A Python script that converts PDFs using non-Unicode Tibetan fonts into Unicode text. A work in progress, with a long list of supported legacy fonts.
+  needs: [copy-from-pdf, convert-old-documents]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: Python
+  repo: https://github.com/buda-base/py-tiblegenc
+
+- id: utfc
+  name: Universal Tibetan Font Converter (UTFC)
+  url: https://github.com/tracefoundation/UTFC
+  author: { name: Tashi Tsering, for Trace Foundation, url: https://github.com/tracefoundation }
+  description: Converts files between Tibetan encoding schemes and file formats (text, RTF, HTML), including twelve legacy fonts, Unicode and Wylie variants. A command-line program compiled from C; its README notes some known bugs.
+  needs: [convert-old-documents]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: C
+  repo: https://github.com/tracefoundation/UTFC
+
+- id: bdrc-tibetan-ocr-app
+  name: BDRC Tibetan OCR app
+  url: https://github.com/buda-base/tibetan-ocr-app
+  author: { name: Buddhist Digital Resource Center (BDRC), url: https://www.bdrc.io/ }
+  description: A desktop app that runs Tibetan OCR on batches of images, including PDFs, and exports plain text or PageXML. Developed by Eric Werner for BDRC; installers for Windows and macOS. It works best with Uchen scripts.
+  needs: [ocr]
+  platforms: [mac, windows]
+  free: true
+  openSource: true
+  developer: false
+  repo: https://github.com/buda-base/tibetan-ocr-app
+
+- id: bdrc-huggingface
+  name: BDRC models and datasets on Hugging Face
+  url: https://huggingface.co/BDRC
+  author: { name: Buddhist Digital Resource Center (BDRC), url: https://www.bdrc.io/ }
+  description: BDRC's page on Hugging Face, "making Buddhist texts available to everyone using AI (OCR, search, etc.), focusing primarily on Tibetan". Hosts open OCR models and datasets.
+  needs: [ocr]
+  platforms: [web]
+  free: true
+  openSource: true
+  developer: true
+  language: Models and datasets
+
+# ---------------------------------------------------------------- Other authors: phonetics, Wylie, dictionaries
+
+- id: lotsawa-phonetics
+  name: Tibetan Phonetics Generator
+  url: https://www.lotsawahouse.org/Static/tools/phonetics.html
+  author: { name: Lotsawa House, url: https://www.lotsawahouse.org/ }
+  description: Provides the pronunciation of a passage of Tibetan text, using one of several systems including Lotsawa House's own and the THL Simplified Phonemic Transcription.
+  needs: [phonetics-iast]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: thl-phonetics
+  name: THL Tibetan Phonetics Converter
+  url: https://thlib.org/terms/#/terms/phonetics
+  author: { name: Tibetan and Himalayan Library (THL), url: https://thlib.org/ }
+  description: The phonetics converter of the Tibetan and Himalayan Library, in its Tibetan Terms section. THL describes its Simplified Phonemic Transcription as its system for easy-to-pronounce romanized Tibetan.
+  needs: [phonetics-iast]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: thl-transliteration
+  name: THL Tibetan Transliteration Converter
+  url: https://thlib.org/terms/#/terms/transliterate
+  author: { name: Tibetan and Himalayan Library (THL), url: https://thlib.org/ }
+  description: The Tibetan and Himalayan Library's online converter between Tibetan script and Wylie transliteration, in its Tibetan Terms section.
+  needs: [type-tibetan, phonetics-iast]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: thl-translation-tool
+  name: THL Tibetan Translation Tool
+  url: https://thlib.org/terms/#/translate/tibetan
+  author: { name: Tibetan and Himalayan Library (THL), url: https://thlib.org/ }
+  description: A look-up and translation tool in the Tibetan Terms section of the Tibetan and Himalayan Library, whose dictionary content comes with definitions, multimedia and pronunciation.
+  needs: [dictionaries]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: pyewts
+  name: pyewts
+  url: https://github.com/WeBuddhist/pyewts
+  author: { name: OpenPecha, url: https://openpecha.org }
+  description: Python utilities for converting between Extended Wylie (EWTS) and Tibetan Unicode.
+  needs: [type-tibetan]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: Python
+  repo: https://github.com/WeBuddhist/pyewts
+
+- id: botok
+  name: Botok
+  url: https://github.com/WeBuddhist/Botok
+  author: { name: OpenPecha, url: https://openpecha.org }
+  description: A Python library for tokenizing Tibetan text into words, which can also add lemmas, part-of-speech tags and clean forms.
+  needs: [find-texts]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: Python
+  repo: https://github.com/WeBuddhist/Botok
+
+# ---------------------------------------------------------------- Other authors: pechas
+
+- id: nyingtik-pecha-printer
+  name: Tibetan Pecha PDF Tool
+  url: https://hankop1984.github.io/PechaPrinter/
+  author: { name: Nyingtik Project, url: https://www.longchennyingtik.org/booklet-printer-pecha-tools }
+  description: Reformats Tibetan pecha PDFs, including those from the BDRC library, into printable layouts with three folios per A4 page. The authors say it may have minor bugs.
+  needs: [pechas-layout]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: nyingtik-booklet-printer
+  name: A5 Booklet Printer
+  url: https://hankop1984.github.io/A5BookletPrinter/
+  author: { name: Listed by the Nyingtik Project, url: https://www.longchennyingtik.org/booklet-printer-pecha-tools }
+  description: A free web tool that turns any PDF into a print-ready A5 booklet, with one or two booklets per sheet.
+  needs: [pechas-layout]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: ctan-pecha
+  name: pecha (LaTeX package)
+  url: https://ctan.org/pkg/pecha
+  author: { name: Dieter Jäger, url: https://ctan.org/pkg/pecha }
+  description: Typesets Tibetan text in the traditional pecha layout with LaTeX. Builds on the cTib4TeX package by Oliver Corff and adds multilingual headers and Tibetan page numbering.
+  needs: [pechas-layout]
+  platforms: []
+  free: true
+  openSource: true
+  developer: true
+  language: LaTeX
+
+# ---------------------------------------------------------------- Other authors: fonts
+
+- id: jomolhari
+  name: Jomolhari
+  url: https://fonts.google.com/specimen/Jomolhari
+  author: { name: Chris Fynn, url: https://sites.google.com/view/chrisfynn/home/fonts/jomolhari }
+  description: A free, Unicode-compatible Tibetan script font named after Mt Jomolhari on the border of Bhutan and Tibet, available from Google Fonts. Usable for Tibetan and Dzongkha.
+  needs: [fonts]
+  platforms: [web, mac, windows]
+  free: true
+  openSource: true
+  developer: false
+
+- id: noto-serif-tibetan
+  name: Noto Serif Tibetan
+  url: https://fonts.google.com/noto/specimen/Noto+Serif+Tibetan
+  author: { name: Google (Noto project), url: https://fonts.google.com/noto }
+  description: A modulated ("serif") design for Tibetan, from Google's Noto collection of fonts for all modern and ancient languages.
+  needs: [fonts]
+  platforms: [web, mac, windows]
+  free: true
+  openSource: true
+  developer: false
+
+- id: babelstone-tibetan
+  name: BabelStone Tibetan
+  url: https://www.babelstone.co.uk/Fonts/Tibetan.html
+  author: { name: Andrew West, url: https://www.babelstone.co.uk/ }
+  description: An extended version of Jomolhari with additional glyphs, also available in a slim variant. Free to download from the author's site.
+  needs: [fonts]
+  platforms: [mac, windows]
+  free: true
+  openSource: false
+  developer: false
+
+- id: ddc-uchen
+  name: DDC Uchen
+  url: https://sites.google.com/view/chrisfynn/home/fonts/ddc-uchen
+  author: { name: Chris Fynn, url: https://sites.google.com/view/chrisfynn/home/fonts/jomolhari }
+  description: A Unicode Uchen Tibetan font by Chris Fynn, listed by Digital Tibetan as released under the SIL Open Font License.
+  needs: [fonts]
+  platforms: [mac, windows]
+  free: true
+  openSource: true
+  developer: false
+
+- id: tibetan-machine-uni
+  name: Tibetan Machine Uni
+  url: https://pktc.org/tibetan-software/free-tibetan-font/
+  author: { name: Padma Karpo Translation Committee, url: https://pktc.org/ }
+  description: The free Tibetan Machine typeface, offered by the Padma Karpo Translation Committee as TibetanMachineUnicode (OpenType) together with the older legacy-encoded versions. PKTC describes it as public domain under the GNU licence.
+  needs: [fonts]
+  platforms: [mac, windows]
+  free: true
+  openSource: true
+  developer: false
+
+# ---------------------------------------------------------------- Other authors: texts
+
+- id: bdrc-library
+  name: BDRC Buddhist Digital Archives
+  url: https://library.bdrc.io
+  author: { name: Buddhist Digital Resource Center (BDRC), url: https://www.bdrc.io/ }
+  description: A cooperative platform for expanding access to Buddhist literature, with millions of pages of texts contributed by BDRC and its many partners.
+  needs: [find-texts]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: lotsawa-house
+  name: Lotsawa House
+  url: https://www.lotsawahouse.org/
+  author: { name: Lotsawa House, url: https://www.lotsawahouse.org/ }
+  description: Translations of Tibetan Buddhist texts, plus a set of Tibetan digital tools including a Wylie converter, a phonetics generator and a Phugpa calendar converter.
+  needs: [find-texts]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: "84000"
+  name: "84000"
+  url: https://84000.co/
+  author: { name: 84000, url: https://84000.co/ }
+  description: A global nonprofit making the Tibetan Buddhist canon freely available in modern languages through English translations, interactive tools and study resources.
+  needs: [find-texts]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: thl
+  name: Tibetan and Himalayan Library
+  url: https://thlib.org/
+  author: { name: Tibetan and Himalayan Library (THL), url: https://thlib.org/ }
+  description: An open online library of texts, photographs, audio-video recordings and studies about the Tibetan plateau and the southern Himalayan regions. All content is open access.
+  needs: [find-texts, dictionaries]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: openpecha
+  name: OpenPecha
+  url: https://openpecha.org/
+  author: { name: OpenPecha, url: https://openpecha.org/ }
+  description: Empowers communities to learn, live and share Buddhist wisdom through digital technologies. The organisation behind Botok and pdf-cmap-fix, among other projects.
+  needs: [find-texts]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false

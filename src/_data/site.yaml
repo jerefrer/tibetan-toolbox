@@ -1,0 +1,14 @@
+name: Tibetan Toolbox
+tibetanName: བོད་ཡིག་ལག་ཆ།
+origin: https://jerefrer.github.io
+basePath: /tibetan-toolbox/
+tagline: Free tools for translators, editors and practitioners working with Tibetan.
+description: A neutral, hand-checked directory of free tools for Tibetan language and Tibetan Buddhist texts - keyboards, dictionaries, OCR, converters, fonts and libraries.
+repo: https://github.com/jerefrer/tibetan-toolbox
+issues: https://github.com/jerefrer/tibetan-toolbox/issues/new?template=suggest-a-tool.yml
+maintainer:
+  name: Frère Jérémy
+  url: https://frerejeremy.me
+  support: https://frerejeremy.me/#support
+  contact: https://frerejeremy.me/#contact
+  github: https://github.com/jerefrer
