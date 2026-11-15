@@ -22,6 +22,40 @@
   repo: https://github.com/jerefrer/tibetan-translator
   maintainer: jerefrer
 
+- id: steinert-dictionary
+  name: Tibetan-English Dictionary
+  url: https://dictionary.christian-steinert.de/
+  author: { name: Christian Steinert, url: https://github.com/christiansteinert/tibetan-dictionary }
+  description: Searches dozens of Tibetan, English and Sanskrit dictionaries at once, on the web and in an Android app. Its collected dictionary data also powers other tools.
+  needs: [dictionaries]
+  platforms: [web, android]
+  free: true
+  openSource: true
+  developer: false
+  repo: https://github.com/christiansteinert/tibetan-dictionary
+
+- id: dharmamitra
+  name: Dharmamitra
+  url: https://dharmamitra.org/
+  author: { name: "Tsadra Foundation, Tohoku University and UC Berkeley", url: https://dharmamitra.org/ }
+  description: AI translation and research for Buddhist texts, between Tibetan, Sanskrit, Pāli, Chinese and English.
+  needs: [dictionaries]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
+- id: monlam-ai
+  name: Monlam AI
+  url: https://monlam.ai/
+  author: { name: Monlam IT Research Centre, url: https://monlam.ai/ }
+  description: "Tibetan language AI from the Monlam centre, home of the Grand Monlam Dictionary: translation, the Melong assistant, speech to text, text to speech and OCR."
+  needs: [dictionaries]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
 - id: easy-tibetan-copy
   name: Easy Tibetan Copy
   url: https://buda-base.github.io/easy-tibetan-copy/
