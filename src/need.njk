@@ -14,7 +14,6 @@ eleventyComputed:
 {% from "partials/macros.njk" import toolCard %}
 {%- set matching = tools | toolsForNeed(need.id) -%}
 <div class="wrap page">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a> <span aria-hidden="true">/</span> <span>{{ need.title }}</span></nav>
   <div class="need-head">
     {#- The same drawing as the need's tile on the home page. #}
     <span class="need-head__icon tile--{{ need.colour }}">{% include "icons/needs/" + need.id + ".svg" %}</span>

@@ -192,8 +192,9 @@ kbd {
 .gh-icon { width: 30px; height: 30px; flex: none; }
 
 /* Inner pages */
-.page { padding-top: 8px; padding-bottom: 72px; max-width: 920px; }
-.crumbs { font-size: 14px; color: var(--muted); margin: 8px 0 22px; }
+.page { padding-top: 40px; padding-bottom: 72px; max-width: 920px; }
+/* Only second-level pages have a breadcrumb; it sits in the space above the title. */
+.crumbs { font-size: 14px; color: var(--muted); margin: -20px 0 22px; }
 .crumbs a { color: var(--muted); }
 .page__title { font-size: 46px; font-weight: 800; letter-spacing: -0.025em; line-height: 1.08; margin-bottom: 20px; }
 .prose { display: flex; flex-direction: column; gap: 14px; max-width: 720px; font-size: 17px; line-height: 1.6; }
