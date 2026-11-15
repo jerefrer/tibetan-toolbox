@@ -3,8 +3,7 @@
   slug: type-tibetan
   name: Type Tibetan
   filter: Type Tibetan
-  glyph: ཀ་ཁ་ག
-  glyphTibetan: true
+  colour: blue
   tile: Wylie keyboards on Mac, Windows, iPhone and Android, with video guides.
   title: Type Tibetan
   metaDescription: How to type Tibetan on Mac, Windows, iPhone and Android using Wylie, with video guides, downloads and a cheat sheet, plus other keyboards and converters.
@@ -15,7 +14,7 @@
   slug: copy-from-pdf
   name: Copy Tibetan from a PDF
   filter: Copy from PDFs
-  glyph: PDF
+  colour: red
   tile: Easy Tibetan Copy turns broken text into correct Unicode.
   title: Copy and search Tibetan in PDFs
   metaDescription: Tools that make Tibetan in PDFs copyable and searchable as correct Unicode, instead of gibberish.
@@ -26,7 +25,7 @@
   slug: phonetics-iast
   name: Get phonetics or IAST
   filter: Phonetics & IAST
-  glyph: ā ṃ
+  colour: green
   tile: Tibetan to Phonetics, and Mantra to IAST & Phonetics.
   title: Phonetics and IAST
   metaDescription: Tools that turn Tibetan script into readable phonetics, Wylie, or IAST transliteration for Sanskrit mantras.
@@ -37,8 +36,7 @@
   slug: dictionaries
   name: Look up a word
   filter: Dictionaries
-  glyph: ཚིག་མཛོད།
-  glyphTibetan: true
+  colour: yellow
   tile: Tibetan Translator gathers the major dictionaries in one search.
   title: Look up a word
   metaDescription: Online and offline Tibetan dictionaries and word look-up tools for translators and students.
@@ -48,7 +46,7 @@
   slug: convert-old-documents
   name: Convert old documents
   filter: Convert old fonts
-  glyph: A→U
+  colour: blue
   tile: ANSI fonts (TibetanChogyal and others) to Unicode.
   title: Convert old documents to Unicode
   metaDescription: Tools that convert old Tibetan documents written in legacy (ANSI) fonts such as TibetanChogyal to Unicode.
@@ -59,7 +57,7 @@
   slug: pechas-layout
   name: Print or lay out pechas
   filter: Pechas & layout
-  glyph: ▤
+  colour: red
   tile: Pecha Printer, plus InDesign and Word scripts for booklets.
   title: Print or lay out pechas and booklets
   metaDescription: Tools for printing pecha PDFs and for laying out Tibetan pechas and booklets in InDesign, Word and LaTeX.
@@ -70,7 +68,7 @@
   slug: ocr
   name: Recognise text in scans
   filter: OCR
-  glyph: OCR
+  colour: green
   tile: Turn scans and photos of Tibetan pages into editable text.
   title: Recognise text in scans
   metaDescription: Tools for Tibetan OCR - turning scans and photographs of Tibetan pages into editable, searchable Unicode text.
@@ -81,8 +79,7 @@
   slug: fonts
   name: Tibetan fonts
   filter: Fonts
-  glyph: ཨ
-  glyphTibetan: true
+  colour: yellow
   tile: Free Unicode fonts for reading and printing Tibetan.
   title: Tibetan fonts
   metaDescription: A short list of free Unicode Tibetan fonts, each from its own author, with the licence the author gives.
@@ -93,8 +90,7 @@
   slug: find-texts
   name: Find and read texts
   filter: Texts & libraries
-  glyph: དཔེ་ཆ།
-  glyphTibetan: true
+  colour: blue
   tile: Libraries and archives of Tibetan texts and translations.
   title: Find and read texts
   metaDescription: Libraries and archives of Tibetan Buddhist texts, translations and reference material that are free to read online.

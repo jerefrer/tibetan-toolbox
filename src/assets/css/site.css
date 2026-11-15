@@ -15,6 +15,11 @@
   --band: #262a44;
   --band-text: #c3c6d8;
   --focus: #8a5a00;
+  /* Need tiles take four of the five prayer-flag colours. */
+  --flag-blue: #2f63c9; --flag-blue-bg: #eaf0fc; --flag-blue-tint: #c9d7f4;
+  --flag-red: #d0473a; --flag-red-bg: #fcecea; --flag-red-tint: #f6c9c3;
+  --flag-green: #23935f; --flag-green-bg: #e6f5ee; --flag-green-tint: #bfe3d0;
+  --flag-yellow: #c4800f; --flag-yellow-bg: #fdf3e1; --flag-yellow-tint: #f2cf94;
   --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   --bo: "Jomolhari", "Noto Serif Tibetan", serif;
 }
@@ -103,8 +108,26 @@ kbd {
 .tile { text-decoration: none; color: var(--ink); background: var(--soft); border-radius: 20px; padding: 26px; display: flex; flex-direction: column; gap: 10px; min-height: 180px; height: 100%; border: 2px solid transparent; }
 .tile:hover { color: var(--ink); border-color: var(--lapis); }
 .tile strong { font-size: 21px; }
-.tile__glyph { font-size: 30px; font-weight: 800; color: var(--lapis); }
-.tile__glyph--bo { font-family: var(--bo); font-weight: 400; }
+.tile--blue { --c: var(--flag-blue); --c-bg: var(--flag-blue-bg); --c-tint: var(--flag-blue-tint); }
+.tile--red { --c: var(--flag-red); --c-bg: var(--flag-red-bg); --c-tint: var(--flag-red-tint); }
+.tile--green { --c: var(--flag-green); --c-bg: var(--flag-green-bg); --c-tint: var(--flag-green-tint); }
+.tile--yellow { --c: var(--flag-yellow); --c-bg: var(--flag-yellow-bg); --c-tint: var(--flag-yellow-tint); }
+.tile[class*="tile--"] { background: var(--c-bg); }
+.tile[class*="tile--"]:hover { border-color: var(--c); }
+.tile__icon { width: 76px; height: 76px; display: block; }
+.tile__icon .i-f { fill: var(--c); }
+.tile__icon .i-s { stroke: var(--c); }
+.tile__icon .i-p { fill: var(--white); }
+.tile__icon .i-t { fill: var(--c-tint); }
+.tile__icon .i-ink { fill: var(--ink); }
+.tile__icon .i-ink-s { stroke: var(--ink); }
+.tile__icon .i-glass { fill: var(--white); fill-opacity: 0.85; }
+.tile__icon .i-mute { stroke: var(--field); }
+.tile__icon .i-mute-f { fill: var(--field); }
+.tile__icon .i-bo { font-family: var(--bo); }
+.tile__icon .i-bo-alt { font-family: "Noto Serif Tibetan", serif; }
+.tile__icon .i-sans { font-family: var(--sans); }
+.tile__icon .i-serif { font-family: Georgia, serif; }
 .tile__text { font-size: 15px; color: var(--muted); }
 
 .band { background: var(--ink); color: var(--white); }

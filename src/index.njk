@@ -23,8 +23,8 @@ scripts:
   <ul class="tiles">
     {%- for n in needs %}
     <li>
-      <a class="tile" href="{{ ('/' + n.slug + '/') | url }}">
-        <span class="tile__glyph{% if n.glyphTibetan %} tile__glyph--bo{% endif %}"{% if n.glyphTibetan %} lang="bo"{% endif %} aria-hidden="true">{{ n.glyph }}</span>
+      <a class="tile tile--{{ n.colour }}" href="{{ ('/' + n.slug + '/') | url }}">
+        {% include "icons/needs/" + n.id + ".svg" %}
         <strong>{{ n.name }}</strong>
         <span class="tile__text">{{ n.tile }}</span>
       </a>
