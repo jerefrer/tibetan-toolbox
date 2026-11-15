@@ -356,20 +356,9 @@
   name: Gboard
   url: https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin
   author: { name: Google, url: https://www.google.com/ }
-  description: Google's keyboard app. According to the Digital Tibetan guide, its Tibetan keyboard is available on Android but not in the iOS version.
+  description: Google's keyboard app. Its Tibetan keyboard is available on Android but not in the iOS version.
   needs: [type-tibetan]
   platforms: [android]
-  free: true
-  openSource: false
-  developer: false
-
-- id: digital-tibetan
-  name: Digital Tibetan
-  url: https://digitaltibetan.github.io/DigitalTibetan/main.html
-  author: { name: Digital Tibetan Community, url: https://digitaltibetan.github.io/DigitalTibetan/main.html }
-  description: A community-run guide to using Tibetan on digital devices, with pages on keyboards, fonts, dictionaries, OCR, converting old Tibetan text and more. Still under development.
-  needs: [type-tibetan, convert-old-documents, ocr]
-  platforms: [web]
   free: true
   openSource: false
   developer: false
@@ -591,7 +580,7 @@
   name: DDC Uchen
   url: https://sites.google.com/view/chrisfynn/home/fonts/ddc-uchen
   author: { name: Chris Fynn, url: https://sites.google.com/view/chrisfynn/home/fonts/jomolhari }
-  description: A Unicode Uchen Tibetan font by Chris Fynn, listed by Digital Tibetan as released under the SIL Open Font License.
+  description: A Unicode Uchen Tibetan font by Chris Fynn for the Dzongkha Development Commission, released under the SIL Open Font License.
   needs: [fonts]
   platforms: [mac, windows]
   free: true
