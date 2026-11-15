@@ -10,6 +10,7 @@
   data-dev="{{ 'true' if t.developer else 'false' }}">
   <div class="tool__body">
     <div class="tool__head">
+      <img class="tool__icon" src="{{ ('/assets/img/tools/' + t.id + '.png') | url }}" alt="" width="40" height="40" loading="lazy">
       <h3 class="tool__name">{{ t.name }}</h3>
       <span class="tool__by">
         {%- if t.developer -%}developer library{% if t.language %} · {{ t.language }}{% endif %} · {% endif -%}
