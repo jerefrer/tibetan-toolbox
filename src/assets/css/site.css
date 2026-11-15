@@ -73,7 +73,7 @@ kbd {
 .site-header--bar .header-row { padding-top: 22px; padding-bottom: 22px; justify-content: flex-start; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); flex: none; }
 .brand:hover { color: var(--ink); }
-.brand__icon { width: 36px; height: 36px; display: block; }
+.brand__icon { width: 44px; height: 44px; display: block; }
 .brand__name { font-weight: 800; font-size: 22px; letter-spacing: -0.01em; }
 .brand__bo { font-family: var(--bo); font-size: 18px; color: var(--lapis); }
 .nav { display: flex; flex-wrap: wrap; gap: 8px 26px; font-size: 15px; font-weight: 500; }
