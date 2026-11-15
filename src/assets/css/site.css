@@ -224,8 +224,7 @@ kbd {
 .device-cards span { font-size: 15px; color: var(--muted); }
 .device-cards .os-badge { width: 48px; height: 48px; border-radius: 14px; margin-bottom: 8px; }
 .device-cards .os-badge .band__os { width: 26px; height: 26px; }
-.device-cards a.is-yours { border-color: var(--lapis); background: var(--white); }
-.device-cards .device-cards__yours { align-self: flex-start; margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--lapis); background: var(--pill); padding: 3px 10px; border-radius: 999px; }
+.device-cards .device-cards__yours { align-self: flex-start; margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--white); background: var(--lapis); padding: 3px 10px; border-radius: 999px; }
 .platform-switch { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; }
 .platform-switch a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--field); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15px; }
 .platform-switch a:hover { border-color: var(--lapis); color: var(--ink); }

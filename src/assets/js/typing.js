@@ -19,6 +19,5 @@
   else if (/Windows/.test(ua)) os = "windows";
   const card = os && byOs[os];
   if (!card) return;
-  card.classList.add("is-yours");
   card.querySelector(".device-cards__yours").hidden = false;
 })();
