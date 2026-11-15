@@ -478,17 +478,6 @@
   openSource: false
   developer: false
 
-- id: thl-translation-tool
-  name: THL Tibetan Translation Tool
-  url: https://thlib.org/terms/#/translate/tibetan
-  author: { name: Tibetan and Himalayan Library (THL), url: https://thlib.org/ }
-  description: A look-up and translation tool in the Tibetan Terms section of the Tibetan and Himalayan Library, whose dictionary content comes with definitions, multimedia and pronunciation.
-  needs: []
-  platforms: [web]
-  free: true
-  openSource: false
-  developer: false
-
 - id: pyewts
   name: pyewts
   url: https://github.com/WeBuddhist/pyewts
