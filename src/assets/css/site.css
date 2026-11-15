@@ -22,6 +22,8 @@
   --flag-red: #d0473a; --flag-red-bg: #fcecea; --flag-red-tint: #f6c9c3;
   --flag-green: #23935f; --flag-green-bg: #e6f5ee; --flag-green-tint: #bfe3d0;
   --flag-yellow: #c4800f; --flag-yellow-bg: #fdf3e1; --flag-yellow-tint: #f2cf94;
+  /* Wrapped pechas: cloth and brocade colours. */
+  --cloth-orange: #e0782c; --cloth-saffron: #e09a2c; --brocade-gold: #f2c94c;
   --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   --bo: "Jomolhari", "Noto Serif Tibetan", serif;
 }
@@ -125,6 +127,11 @@ kbd {
 .tile__icon .i-t { fill: var(--c-tint); }
 .tile__icon .i-ink { fill: var(--ink); }
 .tile__icon .i-ink-s { stroke: var(--ink); }
+.tile__icon .i-blue { fill: var(--flag-blue); }
+.tile__icon .i-red { fill: var(--flag-red); }
+.tile__icon .i-gold { fill: var(--brocade-gold); }
+.tile__icon .i-orange { fill: var(--cloth-orange); }
+.tile__icon .i-saffron { fill: var(--cloth-saffron); }
 .tile__icon .i-glass { fill: var(--white); fill-opacity: 0.85; }
 .tile__icon .i-mute { stroke: var(--field); }
 .tile__icon .i-mute-f { fill: var(--field); }
