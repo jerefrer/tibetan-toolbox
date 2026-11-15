@@ -48,6 +48,7 @@
       const link = el("a", "home-results__item");
       link.href = tool.url;
       link.rel = "noopener";
+      link.target = "_blank";
       const icon = el("img", "home-results__icon");
       icon.src = tool.icon;
       icon.alt = "";

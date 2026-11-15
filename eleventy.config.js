@@ -32,6 +32,15 @@ export default function (eleventyConfig) {
   );
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
 
+  // Every link to another site opens in a new tab, so the visitor never loses the toolbox.
+  eleventyConfig.addTransform("externalLinksInNewTab", function (content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return content.replace(/<a\b([^>]*\bhref="https?:\/\/(?!(?:www\.)?tibetantoolbox\.org)[^"]*"[^>]*)>/g, (tag, attrs) => {
+      let out = attrs;
+      if (!/\btarget=/.test(out)) out += ' target="_blank"';
+      if (!/\brel=/.test(out)) out += ' rel="noopener"';
+      return `<a${out}>`;
+    });
   });
   // Platforms with a video have their own page; the others are a section of /type-tibetan/.
   eleventyConfig.addFilter("deviceHref", (device) =>
