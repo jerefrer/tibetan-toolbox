@@ -5,6 +5,7 @@
 # Optional: repo (source URL), language (libraries), maintainer: jerefrer (the site's maintainer's own tools),
 #           teaser: "short note" (lists the library in the home page's developer teaser)
 #           stack: [javascript, python] (language logos shown next to the teaser)
+#           specimen: [width, height] (fonts: display size of the sample in assets/img/specimens/<id>.png)
 # Keep descriptions to what the tool's own page or README says.
 
 # ---------------------------------------------------------------- Frère Jérémy: tools
@@ -560,6 +561,7 @@
   free: true
   openSource: true
   developer: false
+  specimen: [251, 58]
 
 - id: noto-serif-tibetan
   name: Noto Serif Tibetan
@@ -571,6 +573,7 @@
   free: true
   openSource: true
   developer: false
+  specimen: [320, 74]
 
 - id: babelstone-tibetan
   name: BabelStone Tibetan
@@ -582,6 +585,7 @@
   free: true
   openSource: false
   developer: false
+  specimen: [252, 58]
 
 - id: ddc-uchen
   name: DDC Uchen
@@ -593,6 +597,7 @@
   free: true
   openSource: true
   developer: false
+  specimen: [309, 72]
 
 - id: tibetan-machine-uni
   name: Tibetan Machine Uni
@@ -604,6 +609,7 @@
   free: true
   openSource: true
   developer: false
+  specimen: [166, 37]
 
 # ---------------------------------------------------------------- Other authors: texts
 
