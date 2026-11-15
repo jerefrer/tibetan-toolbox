@@ -43,7 +43,7 @@ scripts:
     </div>
     <ul class="band__tiles">
       {%- for d in typing.devices %}
-      <li><a href="{{ ('/type-tibetan/#' + d.id) | url }}"><span class="band__device">{{ d.name }}</span><span class="band__state">{% if d.video %}Video guide{% else %}Coming soon{% endif %}</span></a></li>
+      <li><a href="{{ ('/type-tibetan/#' + d.id) | url }}">{% include "icons/os/" + d.id + ".svg" %}<span class="band__device">{{ d.name }}</span><span class="band__state">{% if d.video %}Video guide{% else %}Coming soon{% endif %}</span></a></li>
       {%- endfor %}
     </ul>
   </div>
