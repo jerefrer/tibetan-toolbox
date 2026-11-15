@@ -15,7 +15,7 @@
   author: { name: Frère Jérémy, url: https://frerejeremy.me }
   description: Gives access to the best Tibetan dictionaries in one pleasant interface. Supports Wylie, phonetic search and assisted sentence splitting, and works offline.
   needs: [dictionaries]
-  platforms: [web, mac, windows]
+  platforms: [mac, windows]
   free: true
   openSource: true
   developer: false
