@@ -39,7 +39,7 @@
   name: Dharmamitra
   url: https://dharmamitra.org/
   author: { name: "Tsadra Foundation, Tohoku University and UC Berkeley", url: https://dharmamitra.org/ }
-  description: AI translation and research for Buddhist texts, between Tibetan, Sanskrit, Pāli, Chinese and English.
+  description: AI translation, dictionary look-up and research for Buddhist texts, between Tibetan, Sanskrit, Pāli, Chinese and English.
   needs: [dictionaries]
   platforms: [web]
   free: true
@@ -50,8 +50,8 @@
   name: Monlam AI
   url: https://monlam.ai/
   author: { name: Monlam IT Research Centre, url: https://monlam.ai/ }
-  description: "Tibetan language AI from the Monlam centre, home of the Grand Monlam Dictionary: translation, the Melong assistant, speech to text, text to speech and OCR."
-  needs: [dictionaries]
+  description: "Tibetan language AI from the Monlam centre, home of the Grand Monlam Dictionary: dictionary look-up, translation, the Melong assistant, speech to text, text to speech and OCR."
+  needs: [dictionaries, ocr]
   platforms: [web]
   free: true
   openSource: false
@@ -130,7 +130,7 @@
   needs: [convert-old-documents]
   platforms: [web]
   free: true
-  openSource: false
+  openSource: true
   developer: false
   repo: https://github.com/jerefrer/tibetan-ansi-to-unicode-app
   maintainer: jerefrer
@@ -156,7 +156,7 @@
   needs: [pechas-layout]
   platforms: [mac, windows]
   free: true
-  openSource: false
+  openSource: true
   developer: false
   repo: https://github.com/jerefrer/indesign-scripts-for-tibetan-booklets-and-pechas
   maintainer: jerefrer
@@ -169,7 +169,7 @@
   needs: [pechas-layout]
   platforms: []
   free: true
-  openSource: false
+  openSource: true
   developer: false
   repo: https://github.com/jerefrer/word-scripts
   maintainer: jerefrer
@@ -332,7 +332,7 @@
   needs: [ocr]
   platforms: [mac, windows]
   free: true
-  openSource: false
+  openSource: true
   developer: true
   language: Python, shell
   repo: https://github.com/jerefrer/TibetanOCR
