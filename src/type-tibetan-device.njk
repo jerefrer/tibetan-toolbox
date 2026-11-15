@@ -5,6 +5,7 @@
     data: "typing.devices",
     size: 1,
     alias: "d",
+    addAllPagesToCollections: true,
     // Only platforms with a video get a page; the others stay a section of /type-tibetan/.
     before: (devices) => devices.filter((d) => d.video),
   },
