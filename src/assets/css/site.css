@@ -243,6 +243,12 @@ kbd {
 .video { position: relative; aspect-ratio: 16 / 9; max-width: 720px; background: var(--ink); border-radius: 14px; overflow: hidden; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .video__caption { margin-top: 8px; font-size: 14px; color: var(--muted); }
+.font-box { display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: center; }
+.font-box__text { flex: 1 1 340px; min-width: 0; }
+.font-box__sample { flex: none; margin: 0; width: 200px; padding: 22px 16px 14px; background: var(--white); border-radius: 14px; box-shadow: 0 1px 2px rgb(23 25 43 / 0.06), 0 6px 18px rgb(23 25 43 / 0.08); text-align: center; }
+.font-box__sample span { display: block; font-family: var(--bo); font-size: 56px; line-height: 1.5; color: var(--ink); }
+.font-box__sample figcaption { font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: 0.02em; }
+.btn__icon { display: inline-block; vertical-align: -3px; margin-right: 8px; }
 .callout, .font-box { margin-top: 28px; background: var(--soft); border-radius: 16px; padding: 22px 24px; max-width: 720px; }
 .callout h3, .font-box h3 { font-size: 20px; margin-bottom: 8px; }
 .callout p, .font-box p { line-height: 1.6; }

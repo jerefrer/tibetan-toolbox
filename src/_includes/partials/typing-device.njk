@@ -42,9 +42,16 @@
 {%- endif %}
 {%- if d.font %}
 <div class="font-box">
-  <h3>{{ typing.font.title }}</h3>
-  <p>{{ typing.font.body }} {{ d.font }}</p>
-  <p class="actions"><a class="btn btn--outline" href="{{ '/downloads/Jomolhari-Regular.ttf' | url }}" download>{{ typing.font.button }}</a></p>
-  <p class="small">{{ typing.font.licence }} <a href="{{ '/downloads/Jomolhari-OFL.txt' | url }}">Read the licence</a>. Jomolhari is by Chris Fynn; this copy comes from Google Fonts.</p>
+  <div class="font-box__text">
+    <h3>{{ typing.font.title }}</h3>
+    <p>{{ typing.font.body }} {{ d.font }}</p>
+    <p class="actions"><a class="btn" href="{{ '/downloads/Jomolhari-Regular.ttf' | url }}" download><svg class="btn__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ typing.font.button }}</a></p>
+    <p class="small">{{ typing.font.licence }} <a href="{{ '/downloads/Jomolhari-OFL.txt' | url }}">Read the licence</a>. Jomolhari is by Chris Fynn; this copy comes from Google Fonts.</p>
+  </div>
+  {#- The page already loads Jomolhari, so the sample is the font itself. #}
+  <figure class="font-box__sample" aria-hidden="true">
+    <span lang="bo">བོད་ཡིག</span>
+    <figcaption>Jomolhari</figcaption>
+  </figure>
 </div>
 {%- endif %}
