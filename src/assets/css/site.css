@@ -206,6 +206,15 @@ kbd {
 .device-cards a:hover { border-color: var(--lapis); color: var(--ink); }
 .device-cards strong { font-size: 20px; }
 .device-cards span { font-size: 15px; color: var(--muted); }
+.device-cards .band__os { width: 28px; height: 28px; color: var(--lapis); margin-bottom: 6px; }
+.device-cards a.is-yours { border-color: var(--lapis); background: var(--white); }
+.device-cards .device-cards__yours { align-self: flex-start; margin-top: 6px; font-size: 13px; font-weight: 700; color: var(--lapis); background: var(--pill); padding: 3px 10px; border-radius: 999px; }
+.platform-switch { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; }
+.platform-switch a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--field); color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15px; }
+.platform-switch a:hover { border-color: var(--lapis); color: var(--ink); }
+.platform-switch a[aria-current="page"] { background: var(--lapis); border-color: var(--lapis); color: var(--white); }
+.platform-switch .band__os { width: 18px; height: 18px; margin: 0; color: currentColor; }
+.device--page { margin-top: 0; }
 .credit { margin-top: 16px; font-size: 14px; color: var(--muted); }
 .device { margin-top: 56px; scroll-margin-top: 16px; }
 .device h2 { margin-bottom: 8px; }

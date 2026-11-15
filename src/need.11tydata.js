@@ -1,5 +1,6 @@
 export default {
   eleventyComputed: {
+    scripts: (data) => (data.need?.id === "type-tibetan" ? ["/assets/js/typing.js"] : data.scripts),
     jsonld: (data) => {
       const need = data.need;
       if (!need) return undefined;

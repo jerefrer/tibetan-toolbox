@@ -12,6 +12,7 @@ devices:
     name: Mac
     card: "Built in: nothing to install."
     title: Typing Tibetan on a Mac
+    metaDescription: How to type Tibetan on a Mac with the built-in Wylie keyboard, step by step with a video, AZERTY tips and a free Tibetan font.
     lead: "Nothing to install: the Tibetan keyboard is part of macOS."
     video: { id: fhJL0PpgNT8, title: "How to Type Tibetan on a Mac – Built-in Wylie Keyboard + Tibetan Fonts" }
     steps:
@@ -27,6 +28,7 @@ devices:
     name: Windows
     card: A small free program to install.
     title: Typing Tibetan on Windows
+    metaDescription: How to type Tibetan on Windows with a free Wylie keyboard that works in every application, step by step with a video and a free Tibetan font.
     lead: "A small free program, open source, that works in every application: Word, LibreOffice, your email, your browser."
     video: { id: knunp4qDZZc, title: "How to Type Tibetan on Windows – Free Wylie Keyboard, Step by Step" }
     steps:

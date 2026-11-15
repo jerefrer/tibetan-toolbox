@@ -1,0 +1,34 @@
+---js
+{
+  layout: "layouts/base.njk",
+  pagination: {
+    data: "typing.devices",
+    size: 1,
+    alias: "d",
+    // Only platforms with a video get a page; the others stay a section of /type-tibetan/.
+    before: (devices) => devices.filter((d) => d.video),
+  },
+  permalink: "type-tibetan/{{ d.id }}/index.html",
+  eleventyComputed: {
+    title: "{{ d.title }}",
+    description: "{{ d.metaDescription }}",
+  },
+}
+---
+<div class="wrap page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a> <span aria-hidden="true">/</span> <a href="{{ '/type-tibetan/' | url }}">Type Tibetan</a> <span aria-hidden="true">/</span> <span>{{ d.name }}</span></nav>
+  <h1 class="page__title">{{ d.title }}</h1>
+  <nav class="platform-switch" aria-label="Other devices">
+    {%- for o in typing.devices %}
+    <a href="{{ o | deviceHref | url }}"{% if o.id == d.id %} aria-current="page"{% endif %}>{% include "icons/os/" + o.id + ".svg" %}{{ o.name }}</a>
+    {%- endfor %}
+  </nav>
+  <section class="guide device device--page" aria-label="{{ d.title }}">
+    {% include "partials/typing-device.njk" %}
+    <p class="credit">{{ typing.credit }}</p>
+  </section>
+  <div class="guide">
+    {% include "partials/typing-cheat-sheet.njk" %}
+  </div>
+  <p class="note">Looking for other keyboards or converters? See <a href="{{ '/type-tibetan/' | url }}">all the ways to type Tibetan</a>.</p>
+</div>
