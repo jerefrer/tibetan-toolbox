@@ -419,6 +419,17 @@
   language: C
   repo: https://github.com/tracefoundation/UTFC
 
+- id: bdrc-ocr-online
+  name: BDRC Tibetan OCR (online)
+  url: https://ocr.bdrc.io/uploads
+  author: { name: Buddhist Digital Resource Center (BDRC), url: https://www.bdrc.io/ }
+  description: BDRC's online service for Tibetan OCR, in the browser with nothing to install. Upload your scans and get the text back. You sign in with a BDRC account.
+  needs: [ocr]
+  platforms: [web]
+  free: true
+  openSource: false
+  developer: false
+
 - id: bdrc-tibetan-ocr-app
   name: BDRC Tibetan OCR app
   url: https://github.com/buda-base/tibetan-ocr-app
