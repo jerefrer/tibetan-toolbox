@@ -222,6 +222,7 @@ kbd {
 .tool:hover .tool__stretch { color: var(--lapis); }
 .tool:hover .btn { background: var(--lapis-dark); border-color: var(--lapis-dark); }
 /* Paid tools: a saffron button, so "Buy" never looks like the free tools' "Open". */
+.pills .pill--paid { background: var(--flag-yellow-bg); color: var(--ink); }
 .tool .btn--paid { background: var(--saffron); border-color: var(--saffron); color: var(--ink); }
 .tool:hover .btn--paid { background: var(--saffron-dark); border-color: var(--saffron-dark); color: var(--ink); }
 .tool:hover .tool__link { text-decoration: underline; }

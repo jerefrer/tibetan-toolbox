@@ -96,6 +96,7 @@
   intro:
     - "A font draws the letters your keyboard types. Every modern computer has one for Tibetan, but free third-party fonts can be clearer, or give you a different style of Uchen for printing."
     - "All fonts here are Unicode fonts, so the text stays searchable and portable. These tools belong to their authors; check each page for its licence before using a font in a publication."
+    - "One exception to the free rule: **Tibetan Chogyal**, a paid font that many consider the finest."
 - id: find-texts
   slug: find-texts
   name: Find and read texts

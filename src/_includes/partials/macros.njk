@@ -26,12 +26,12 @@
     {% if not t.developer or t.platforms.length %}
     <ul class="pills" aria-label="Details">
       {%- for p in t.platforms %}{% for pl in platformList %}{% if pl.id == p %}<li>{{ pl.short }}</li>{% endif %}{% endfor %}{% endfor -%}
-      {%- if t.free %}<li>Free</li>{% endif -%}
+      {%- if t.free %}<li>Free</li>{% else %}<li class="pill--paid">Paid</li>{% endif -%}
       {%- if t.openSource %}<li>Open source</li>{% endif -%}
     </ul>
     {% elif t.free or t.openSource %}
     <ul class="pills" aria-label="Details">
-      {%- if t.free %}<li>Free</li>{% endif -%}
+      {%- if t.free %}<li>Free</li>{% else %}<li class="pill--paid">Paid</li>{% endif -%}
       {%- if t.openSource %}<li>Open source</li>{% endif -%}
     </ul>
     {% endif %}
