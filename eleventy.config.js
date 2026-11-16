@@ -1,4 +1,6 @@
 import * as yaml from "js-yaml";
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 import { fromWylie } from "./src/assets/js/ewts.js";
 
 export default function (eleventyConfig) {
@@ -32,6 +34,12 @@ export default function (eleventyConfig) {
     needIds.map((id) => needs.find((n) => n.id === id)?.name ?? id),
   );
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
+  // Appends a short hash of a file in src/ to its URL. Link previews (WhatsApp, iMessage…)
+  // cache an image by its URL, so a new image needs a new URL to show up.
+  eleventyConfig.addFilter("withHash", (url, srcPath) => {
+    const hash = createHash("sha256").update(readFileSync(srcPath)).digest("hex").slice(0, 8);
+    return `${url}?v=${hash}`;
+  });
 
   // Every link to another site opens in a new tab, so the visitor never loses the toolbox.
   eleventyConfig.addTransform("externalLinksInNewTab", function (content) {

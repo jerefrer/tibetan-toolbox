@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- set pageTitle = title if isHome else (title + " - " + site.name) %}
   {%- set canonical = site.origin + (page.url | url) %}
-  {%- set ogImage = site.origin + ('/assets/img/og-image.png' | url) %}
+  {%- set ogImage = site.origin + ('/assets/img/og-image.png' | url | withHash('src/assets/img/og-image.png')) %}
   <title>{{ pageTitle }}</title>
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="{{ canonical }}">
