@@ -5,6 +5,7 @@
 # Optional: repo (source URL), language (libraries), maintainer: jerefrer (the site's maintainer's own tools),
 #           madeFor {name, url} (the organisation the tool was made for: "by … for …"),
 #           cta: "Buy" (button label instead of "Open", e.g. for paid tools),
+#           exception: "…" (paid tools: why this one is listed despite the free rule, shown in the card),
 #           teaser: "short note" (lists the library in the home page's developer teaser)
 #           stack: [javascript, python] (language logos shown next to the teaser)
 #           specimen: [width, height] (fonts: display size of the sample in assets/img/specimens/<id>.png)
@@ -631,6 +632,7 @@
   openSource: false
   developer: false
   cta: Buy
+  exception: "The one paid tool in this directory, listed as an exception because many Tibetans and publishers consider it the most beautiful Tibetan typeface."
   specimen: [232, 56]
 
 # ---------------------------------------------------------------- Other authors: texts

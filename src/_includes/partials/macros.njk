@@ -3,7 +3,7 @@
    author and category links sit above it so that they still work. #}
 {% macro toolCard(t, needs, platformList, showNeeds) %}
 {%- set isGithub = t.url | hostOf == "github.com" -%}
-<article class="tool{% if t.developer %} tool--dev{% endif %}" id="tool-{{ t.id }}"
+<article class="tool{% if t.developer %} tool--dev{% endif %}{% if not t.free %} tool--paid{% endif %}" id="tool-{{ t.id }}"
   data-id="{{ t.id }}"
   data-needs="{{ t.needs | join(' ') }}"
   data-platforms="{{ t.platforms | join(' ') }}"
@@ -19,6 +19,9 @@
         by {% for a in t | authorsOf %}<a href="{{ a.url }}" rel="noopener">{{ a.name }}</a>{% if not loop.last %}{{ " and " if loop.revindex == 2 else ", " }}{% endif %}{% endfor %}{% if t.madeFor %} for <a href="{{ t.madeFor.url }}" rel="noopener">{{ t.madeFor.name }}</a>{% endif %}
       </span>
     </div>
+    {%- if t.exception %}
+    <p class="tool__exception"><strong>Paid · an exception</strong> {{ t.exception }}</p>
+    {%- endif %}
     <p class="tool__desc">{{ t.description }}</p>
     {%- if t.specimen %}
     <img class="tool__specimen" src="{{ ('/assets/img/specimens/' + t.id + '.png') | url }}" alt="བཀྲ་ཤིས་བདེ་ལེགས། set in {{ t.name }}" width="{{ t.specimen[0] }}" height="{{ t.specimen[1] }}" loading="lazy">

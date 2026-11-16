@@ -222,7 +222,11 @@ kbd {
 .tool:hover .tool__stretch { color: var(--lapis); }
 .tool:hover .btn { background: var(--lapis-dark); border-color: var(--lapis-dark); }
 /* Paid tools: a saffron button, so "Buy" never looks like the free tools' "Open". */
-.pills .pill--paid { background: var(--flag-yellow-bg); color: var(--ink); }
+/* Paid tools are the exception to the free rule: a warm card that says so. */
+.tool--paid { background: var(--flag-yellow-bg); border: 1.5px solid var(--saffron); }
+.tool__exception { font-size: 14px; line-height: 1.5; color: var(--ink); background: var(--white); border-left: 4px solid var(--saffron); border-radius: 6px; padding: 8px 12px; margin: 2px 0 4px; }
+.tool__exception strong { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--flag-yellow); }
+.pills .pill--paid { background: var(--saffron); color: var(--ink); }
 .tool .btn--paid { background: var(--saffron); border-color: var(--saffron); color: var(--ink); }
 .tool:hover .btn--paid { background: var(--saffron-dark); border-color: var(--saffron-dark); color: var(--ink); }
 .tool:hover .tool__link { text-decoration: underline; }
