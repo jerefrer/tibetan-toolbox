@@ -23,8 +23,8 @@
   <meta name="twitter:title" content="{{ pageTitle }}">
   <meta name="twitter:description" content="{{ description }}">
   <meta name="twitter:image" content="{{ ogImage }}">
-  <link rel="icon" href="{{ '/assets/img/favicon.svg' | url }}" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | url }}">
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | url | withHash('src/assets/img/favicon.svg') }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | url | withHash('src/assets/img/apple-touch-icon.png') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Jomolhari&display=swap">
@@ -39,7 +39,7 @@
   {% if catalogueHeader %}
   <header class="site-header site-header--bar">
     <div class="wrap wrap--wide header-row">
-      <a class="brand" href="{{ '/' | url }}"><img class="brand__icon" src="{{ '/assets/img/logo.svg' | url }}" alt="" width="44" height="44"><span class="brand__name">{{ site.name }}</span><span class="brand__bo" lang="bo">{{ site.tibetanName }}</span></a>
+      <a class="brand" href="{{ '/' | url }}"><img class="brand__icon" src="{{ '/assets/img/logo.svg' | url | withHash('src/assets/img/logo.svg') }}" alt="" width="44" height="44"><span class="brand__name">{{ site.name }}</span><span class="brand__bo" lang="bo">{{ site.tibetanName }}</span></a>
       <form class="header-search" role="search" action="{{ '/all/' | url }}" method="get">
         <label class="sr-only" for="search">Search tools</label>
         <input id="search" name="q" type="search" placeholder="Search tools: OCR, Wylie, fonts…" autocomplete="off">
@@ -50,7 +50,7 @@
   {% else %}
   <header class="site-header">
     <div class="wrap header-row">
-      <a class="brand" href="{{ '/' | url }}"><img class="brand__icon" src="{{ '/assets/img/logo.svg' | url }}" alt="" width="44" height="44"><span class="brand__name">{{ site.name }}</span><span class="brand__bo" lang="bo">{{ site.tibetanName }}</span></a>
+      <a class="brand" href="{{ '/' | url }}"><img class="brand__icon" src="{{ '/assets/img/logo.svg' | url | withHash('src/assets/img/logo.svg') }}" alt="" width="44" height="44"><span class="brand__name">{{ site.name }}</span><span class="brand__bo" lang="bo">{{ site.tibetanName }}</span></a>
       <nav class="nav" aria-label="Main">
         <a href="{{ '/' | url }}#needs">By need</a>
         <a href="{{ '/all/' | url }}"{% if page.url == '/all/' %} aria-current="page"{% endif %}>All tools</a>
