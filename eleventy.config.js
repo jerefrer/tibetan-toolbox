@@ -37,7 +37,7 @@ export default function (eleventyConfig) {
   // A tool has one `author` or several `authors`; templates always get a list.
   eleventyConfig.addFilter("authorsOf", (tool) => tool.authors ?? [tool.author]);
   eleventyConfig.addFilter("authorNames", (tool) =>
-    (tool.authors ?? [tool.author]).map((a) => a.name).join(" and "),
+    (tool.authors ?? [tool.author]).map((a) => a.name).join(" and ") + (tool.madeFor ? ` for ${tool.madeFor.name}` : ""),
   );
   // Dates in news.yaml: "2026-11-16" in feeds, "16 November 2026" on the page.
   const toDate = (value) => (value instanceof Date ? value : new Date(value));
