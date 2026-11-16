@@ -5,6 +5,7 @@
   --ink: #17192b;
   --muted: #4b4e63;
   --saffron: #e8a33d;
+  --saffron-dark: #d18b22;
   --soft: #f2f4fb;
   --pill: #eef1fb;
   --line: #e3e6f1;
@@ -220,6 +221,9 @@ kbd {
 .tool__stretch::after { content: ""; position: absolute; inset: 0; border-radius: 16px; }
 .tool:hover .tool__stretch { color: var(--lapis); }
 .tool:hover .btn { background: var(--lapis-dark); border-color: var(--lapis-dark); }
+/* Paid tools: a saffron button, so "Buy" never looks like the free tools' "Open". */
+.tool .btn--paid { background: var(--saffron); border-color: var(--saffron); color: var(--ink); }
+.tool:hover .btn--paid { background: var(--saffron-dark); border-color: var(--saffron-dark); color: var(--ink); }
 .tool:hover .tool__link { text-decoration: underline; }
 .tool__by a, .tool__needs a { position: relative; z-index: 1; }
 .tool--dev { border: 1px dashed var(--field); }

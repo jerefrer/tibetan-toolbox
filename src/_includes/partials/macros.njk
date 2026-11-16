@@ -40,7 +40,7 @@
     {% endif %}
   </div>
   {#- Kept as a visual cue; the name's link already covers the card. #}
-  <span class="{{ 'tool__link' if t.developer or isGithub else 'btn' }}" aria-hidden="true">
+  <span class="{{ 'tool__link' if t.developer or isGithub else 'btn' }}{% if not t.free %} btn--paid{% endif %}" aria-hidden="true">
     {%- if t.cta %}{{ t.cta }}{% elif isGithub %}View on GitHub{% else %}Open{% endif -%}
   </span>
 </article>
