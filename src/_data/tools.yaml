@@ -1,9 +1,10 @@
 # The single source of truth for every tool in the directory.
 #
-# Required: id, name, url, author {name, url} (or authors: a list of them),
-#           madeFor {name, url} optional: the organisation the tool was made for ("by … for …"), description, needs (ids from needs.yaml),
+# Required: id, name, url, author {name, url} (or authors: a list of them), description, needs (ids from needs.yaml),
 #           platforms (web | mac | windows | ios | android), free, openSource, developer
 # Optional: repo (source URL), language (libraries), maintainer: jerefrer (the site's maintainer's own tools),
+#           madeFor {name, url} (the organisation the tool was made for: "by … for …"),
+#           cta: "Buy" (button label instead of "Open", e.g. for paid tools),
 #           teaser: "short note" (lists the library in the home page's developer teaser)
 #           stack: [javascript, python] (language logos shown next to the teaser)
 #           specimen: [width, height] (fonts: display size of the sample in assets/img/specimens/<id>.png)
@@ -618,6 +619,19 @@
   openSource: true
   developer: false
   specimen: [241, 53]
+
+- id: tibetan-chogyal
+  name: Tibetan Chogyal
+  url: https://pktc.org/tibetan-software/premium-tibetan-typefaces/
+  author: { name: Tony Duff (Padma Karpo Translation Committee), url: https://pktc.org/ }
+  description: A premium Uchen typeface that PKTC describes as widely acclaimed by Tibetans as the best typeface available today. Sold as part of PKTC's Tibetan Font Bundle, in Unicode (OpenType) and older non-Unicode versions.
+  needs: [fonts]
+  platforms: [mac, windows]
+  free: false
+  openSource: false
+  developer: false
+  cta: Buy
+  specimen: [232, 56]
 
 # ---------------------------------------------------------------- Other authors: texts
 
