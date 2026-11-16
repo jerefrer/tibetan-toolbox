@@ -1,0 +1,3 @@
+# Order of the All tools list: these tools first, in this order, then the rest
+# alphabetically. Fonts and developer libraries still come last.
+toolOrder: [tibetan-translator, bkntr-tibetan-keyboard, denjong-tibtype, tibetan-wylie-azerty, indesign-scripts]

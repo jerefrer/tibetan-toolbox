@@ -36,9 +36,9 @@ scripts:
 
   <section class="results" aria-labelledby="all-heading">
     <h1 id="all-heading" class="results__title">All tools</h1>
-    <p class="results__summary" id="summary" aria-live="polite">{{ tools.length }} tools, in alphabetical order, with fonts and developer libraries last.</p>
+    <p class="results__summary" id="summary" aria-live="polite">{{ tools.length }} tools, the most used first, with fonts and developer libraries last.</p>
     <div class="tool-list" id="tool-list">
-      {%- for t in tools | userTools | fontsLast %}{{ toolCard(t, needs, platforms, true) }}{% endfor %}
+      {%- for t in tools | userTools | inNeedOrder(catalogue) | fontsLast %}{{ toolCard(t, needs, platforms, true) }}{% endfor %}
       {%- for t in tools | devTools %}{{ toolCard(t, needs, platforms, true) }}{% endfor %}
     </div>
     <p class="empty" id="empty" hidden>No tool matches. Try fewer filters or another word, or <a href="{{ '/suggest/' | url }}">suggest a tool</a>.</p>
