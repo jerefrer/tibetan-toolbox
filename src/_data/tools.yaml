@@ -537,7 +537,7 @@
 - id: nyingtik-booklet-printer
   name: A5 Booklet Printer
   url: https://hankop1984.github.io/A5BookletPrinter/
-  author: { name: Listed by the Nyingtik Project, url: https://www.longchennyingtik.org/booklet-printer-pecha-tools }
+  author: { name: Nyingtik Project, url: https://www.longchennyingtik.org/booklet-printer-pecha-tools }
   description: A free web tool that turns any PDF into a print-ready A5 booklet, with one or two booklets per sheet.
   needs: [pechas-layout]
   platforms: [web]
