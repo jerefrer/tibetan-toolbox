@@ -12,3 +12,6 @@ maintainer:
   support: https://frerejeremy.me/#support
   contact: https://frerejeremy.me/#contact
   github: https://github.com/jerefrer
+# Newsletter on Buttondown. The sign-up box only appears once a username is set.
+newsletter:
+  username: ""

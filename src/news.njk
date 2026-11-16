@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+bodyClass: listing
+title: What's new
+description: The latest tools, guides and improvements in the Tibetan Toolbox.
+---
+<div class="wrap page">
+  <h1 class="page__title">What's new</h1>
+  <div class="prose prose--lead">
+    <p>New tools, guides and improvements, newest first. Also as a <a href="{{ '/news/feed.xml' | url }}">feed</a>.</p>
+  </div>
+  {% set newsletterId = "news" %}{% include "partials/newsletter-signup.njk" %}
+  <ol class="news">
+    {%- for n in news %}
+    <li class="news__item" id="{{ n.id }}">
+      <time datetime="{{ n.date | isoDate }}">{{ n.date | longDate }}</time>
+      <h2>{{ n.title }}</h2>
+      <p>{{ n.body | inline | safe }}</p>
+      {%- if n.links %}
+      <p class="news__links">{% for l in n.links %}<a href="{{ l.url | url if l.url.startsWith('/') else l.url }}">{{ l.text }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+</div>

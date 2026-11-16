@@ -1,0 +1,14 @@
+{%- if site.newsletter.username %}
+<form class="newsletter" action="https://buttondown.com/api/emails/embed-subscribe/{{ site.newsletter.username }}" method="post" target="_blank">
+  <div class="newsletter__text">
+    <strong>Hear about new tools</strong>
+    <span>A short email a few times a year, when something new is added. Unsubscribe anytime.</span>
+  </div>
+  <div class="newsletter__field">
+    <label class="sr-only" for="newsletter-email-{{ newsletterId or 'footer' }}">Your email address</label>
+    <input id="newsletter-email-{{ newsletterId or 'footer' }}" type="email" name="email" required placeholder="you@example.org" autocomplete="email">
+    <input type="hidden" name="embed" value="1">
+    <button class="btn" type="submit">Subscribe</button>
+  </div>
+</form>
+{%- endif %}

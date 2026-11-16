@@ -1,0 +1,30 @@
+# "What's new": one entry per update, newest first. Also feeds /news/feed.xml.
+# Body text may use **bold**; links go in `links`.
+- id: practice-and-cheat-sheet
+  date: 2026-11-16
+  title: Practise Wylie, and a cheat sheet on the web
+  body: "A new page lets you **practise typing Wylie** without installing anything: type in Wylie and the Tibetan appears, then try a game of 22 words with hints. The Wylie cheat sheet is now a web page too, beside the printable PDF."
+  links:
+    - { text: Practise, url: /type-tibetan/practice/ }
+    - { text: The cheat sheet, url: /type-tibetan/cheat-sheet/ }
+- id: device-guides
+  date: 2026-11-16
+  title: A typing guide for each device
+  body: "Mac and Windows each have their own page, with a video and the steps. iPhone and Android have theirs, ready for their videos. On a Mac with a French keyboard, the new **Tibétain - Wylie (AZERTY)** keyboard types every letter from the key that carries it."
+  links:
+    - { text: Type Tibetan, url: /type-tibetan/ }
+    - { text: The AZERTY keyboard, url: https://jerefrer.github.io/tibetan-wylie-azerty/ }
+- id: new-tools-november
+  date: 2026-11-16
+  title: New in the catalogue
+  body: "**KVP Tibetan Phonetics**, the phonetics generator made for the Khyentse Vision Project; Christian Steinert's **Tibetan-English Dictionary**; **Dharmamitra** and **Monlam AI**; and **BDRC's online OCR**, which needs nothing installed."
+  links:
+    - { text: Look up a word, url: /dictionaries/ }
+    - { text: Phonetics and IAST, url: /phonetics-iast/ }
+    - { text: OCR, url: /ocr/ }
+- id: launch
+  date: 2026-11-15
+  title: The Tibetan Toolbox is online
+  body: "A directory of **free tools** for translators, editors and practitioners working with Tibetan, sorted by what you want to do: type Tibetan, copy it from PDFs, get phonetics, look up words, convert old documents, print pechas, run OCR, find fonts and texts."
+  links:
+    - { text: Start here, url: / }

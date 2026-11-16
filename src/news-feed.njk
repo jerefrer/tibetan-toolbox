@@ -1,0 +1,22 @@
+---
+permalink: /news/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }}: what's new</title>
+  <link href="{{ site.origin }}/news/feed.xml" rel="self"/>
+  <link href="{{ site.origin }}/news/"/>
+  <id>{{ site.origin }}/news/</id>
+  <updated>{{ news[0].date | isoDate }}T00:00:00Z</updated>
+  <author><name>{{ site.maintainer.name }}</name></author>
+  {%- for n in news %}
+  <entry>
+    <title>{{ n.title }}</title>
+    <link href="{{ site.origin }}/news/#{{ n.id }}"/>
+    <id>{{ site.origin }}/news/#{{ n.id }}</id>
+    <updated>{{ n.date | isoDate }}T00:00:00Z</updated>
+    <content type="html">{{ (n.body | inline) | escape }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

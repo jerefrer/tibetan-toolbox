@@ -34,6 +34,12 @@ export default function (eleventyConfig) {
     needIds.map((id) => needs.find((n) => n.id === id)?.name ?? id),
   );
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
+  // Dates in news.yaml: "2026-11-16" in feeds, "16 November 2026" on the page.
+  const toDate = (value) => (value instanceof Date ? value : new Date(value));
+  eleventyConfig.addFilter("isoDate", (value) => toDate(value).toISOString().slice(0, 10));
+  eleventyConfig.addFilter("longDate", (value) =>
+    toDate(value).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }),
+  );
   // Appends a short hash of a file in src/ to its URL. Link previews (WhatsApp, iMessage…)
   // cache an image by its URL, so a new image needs a new URL to show up.
   eleventyConfig.addFilter("withHash", (url, srcPath) => {

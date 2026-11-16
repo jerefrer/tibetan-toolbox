@@ -428,3 +428,19 @@ kbd {
   .filters legend { width: 100%; }
 }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+/* What's new */
+.news { list-style: none; margin: 32px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; max-width: 760px; }
+.news__item { background: var(--white); border-radius: 16px; padding: 22px 24px; box-shadow: 0 1px 2px rgb(23 25 43 / 0.06), 0 4px 14px rgb(23 25 43 / 0.07); }
+.news__item time { font-size: 14px; font-weight: 600; color: var(--muted); }
+.news__item h2 { font-size: 21px; margin: 4px 0 8px; }
+.news__item p { font-size: 16px; line-height: 1.6; }
+.news__links { margin-top: 10px; font-weight: 600; font-size: 15px; }
+
+/* Newsletter sign-up */
+.newsletter { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between; background: var(--soft); border-radius: 16px; padding: 20px 24px; margin: 28px 0; }
+.newsletter__text { display: flex; flex-direction: column; gap: 2px; flex: 1 1 280px; }
+.newsletter__text span { font-size: 15px; color: var(--muted); }
+.newsletter__field { display: flex; gap: 8px; flex: 1 1 320px; }
+.newsletter__field input[type="email"] { flex: 1; min-width: 0; font: inherit; font-size: 16px; padding: 11px 14px; border: 1.5px solid var(--field); border-radius: 10px; background: var(--white); color: var(--ink); }
+
