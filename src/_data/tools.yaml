@@ -42,8 +42,8 @@
   name: Dharmamitra
   url: https://dharmamitra.org/
   author: { name: "Tsadra Foundation, Tohoku University and UC Berkeley", url: https://dharmamitra.org/ }
-  description: AI translation, dictionary look-up and research for Buddhist texts, between Tibetan, Sanskrit, Pāli, Chinese and English.
-  needs: [dictionaries]
+  description: AI translation, dictionary look-up, OCR and research for Buddhist texts, between Tibetan, Sanskrit, Pāli, Chinese and English.
+  needs: [dictionaries, ocr]
   platforms: [web]
   free: true
   openSource: false
