@@ -222,15 +222,16 @@ kbd {
 .tool:hover .tool__stretch { color: var(--lapis); }
 .tool:hover .btn { background: var(--lapis-dark); border-color: var(--lapis-dark); }
 /* Paid tools: a saffron button, so "Buy" never looks like the free tools' "Open". */
-/* Paid tools are the exception to the free rule: a warm card that says so. */
-.tool--paid { background: var(--flag-yellow-bg); border: 1.5px solid var(--saffron); }
-.tool__exception { font-size: 14px; line-height: 1.5; color: var(--ink); background: var(--white); border-left: 4px solid var(--saffron); border-radius: 6px; padding: 8px 12px; margin: 2px 0 4px; }
-.tool__exception strong { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--flag-yellow); }
+/* Paid tools are the exception to the free rule: a lapis card that says so. */
+.tool--paid { background: var(--soft); border: 1.5px solid var(--lapis); }
+.tool__exception { font-size: 14px; line-height: 1.5; color: var(--ink); background: var(--white); border-left: 4px solid var(--lapis); border-radius: 6px; padding: 8px 12px; margin: 2px 0 4px; }
+.tool__exception strong { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--lapis); }
 .pills .pill--os { display: inline-flex; align-items: center; gap: 5px; }
 .pill--os .band__os { width: 13px; height: 13px; margin: 0; color: currentColor; flex: none; }
-.pills .pill--paid { background: var(--saffron); color: var(--ink); }
-.tool .btn--paid { background: var(--saffron); border-color: var(--saffron); color: var(--ink); }
-.tool:hover .btn--paid { background: var(--saffron-dark); border-color: var(--saffron-dark); color: var(--ink); }
+.pills .pill--paid { background: var(--lapis); color: var(--white); }
+.tool--paid .pills li:not(.pill--paid) { background: var(--white); }
+.tool .btn--paid { background: var(--lapis-dark); border-color: var(--lapis-dark); color: var(--white); }
+.tool:hover .btn--paid { background: var(--ink); border-color: var(--ink); color: var(--white); }
 .tool:hover .tool__link { text-decoration: underline; }
 .tool__by a, .tool__needs a { position: relative; z-index: 1; }
 .tool--dev { border: 1px dashed var(--field); }
