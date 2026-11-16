@@ -362,6 +362,17 @@
   developer: false
   repo: https://github.com/bkntr/tibetan-keyboard
 
+- id: denjong-tibtype
+  name: DenjongTibType
+  url: https://github.com/thubtenrigzin/DenjongTibType
+  author: { name: thubtenrigzin, url: https://github.com/thubtenrigzin }
+  description: A Tibetan keyboard for Windows that types from Wylie or from a Sambhota layout, on QWERTY or AZERTY, with its interface in English, French or Tibetan.
+  needs: [type-tibetan]
+  platforms: [windows]
+  free: true
+  openSource: false
+  developer: false
+
 - id: lotsawa-ewts
   name: Wylie - Unicode converter
   url: https://www.lotsawahouse.org/Static/tools/ewts.html

@@ -6,7 +6,7 @@
   filter: Type Tibetan
   colour: blue
   tile: Wylie keyboards on Mac, Windows, iPhone and Android, with video guides.
-  toolOrder: [bkntr-tibetan-keyboard, tibetan-wylie-azerty, gboard, lotsawa-ewts, thl-transliteration, pyewts]
+  toolOrder: [bkntr-tibetan-keyboard, denjong-tibtype, tibetan-wylie-azerty, gboard, lotsawa-ewts, thl-transliteration, pyewts]
   title: Type Tibetan
   metaDescription: How to type Tibetan on Mac, Windows, iPhone and Android using Wylie, with video guides, downloads and a cheat sheet, plus other keyboards and converters.
   intro:
