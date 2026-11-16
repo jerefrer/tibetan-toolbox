@@ -439,7 +439,7 @@
   repo: https://github.com/tracefoundation/UTFC
 
 - id: bdrc-ocr-online
-  name: BDRC Tibetan OCR (online)
+  name: BDRC Tibetan OCR
   url: https://ocr.bdrc.io/uploads
   author: { name: Buddhist Digital Resource Center (BDRC), url: https://www.bdrc.io/ }
   description: BDRC's online service for Tibetan OCR, in the browser with nothing to install. Upload your scans and get the text back. You sign in with a BDRC account.
@@ -448,18 +448,6 @@
   free: true
   openSource: false
   developer: false
-
-- id: bdrc-tibetan-ocr-app
-  name: BDRC Tibetan OCR app
-  url: https://github.com/buda-base/tibetan-ocr-app
-  author: { name: Buddhist Digital Resource Center (BDRC), url: https://www.bdrc.io/ }
-  description: A desktop app that runs Tibetan OCR on batches of images, including PDFs, and exports plain text or PageXML. Developed by Eric Werner for BDRC; installers for Windows and macOS. It works best with Uchen scripts.
-  needs: [ocr]
-  platforms: [mac, windows]
-  free: true
-  openSource: true
-  developer: false
-  repo: https://github.com/buda-base/tibetan-ocr-app
 
 - id: bdrc-huggingface
   name: BDRC models and datasets on Hugging Face

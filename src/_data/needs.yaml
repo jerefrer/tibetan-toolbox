@@ -78,7 +78,7 @@
   filter: OCR
   colour: green
   tile: Turn scans and photos of Tibetan pages into editable text.
-  toolOrder: [bdrc-ocr-online, bdrc-tibetan-ocr-app, dharmamitra, monlam-ai]
+  toolOrder: [bdrc-ocr-online, dharmamitra, monlam-ai]
   title: Recognise text in scans
   metaDescription: Tools for Tibetan OCR - turning scans and photographs of Tibetan pages into editable, searchable Unicode text.
   intro:
