@@ -16,7 +16,7 @@
       <h3 class="tool__name"><a class="tool__stretch" href="{{ t.url }}" rel="noopener">{{ t.name }}<span class="sr-only"> (opens another site)</span></a></h3>
       <span class="tool__by">
         {%- if t.developer -%}developer library{% if t.language %} · {{ t.language }}{% endif %} · {% endif -%}
-        by <a href="{{ t.author.url }}" rel="noopener">{{ t.author.name }}</a>
+        by {% for a in t | authorsOf %}<a href="{{ a.url }}" rel="noopener">{{ a.name }}</a>{% if not loop.last %}{{ " and " if loop.revindex == 2 else ", " }}{% endif %}{% endfor %}
       </span>
     </div>
     <p class="tool__desc">{{ t.description }}</p>

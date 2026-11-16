@@ -34,6 +34,11 @@ export default function (eleventyConfig) {
     needIds.map((id) => needs.find((n) => n.id === id)?.name ?? id),
   );
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
+  // A tool has one `author` or several `authors`; templates always get a list.
+  eleventyConfig.addFilter("authorsOf", (tool) => tool.authors ?? [tool.author]);
+  eleventyConfig.addFilter("authorNames", (tool) =>
+    (tool.authors ?? [tool.author]).map((a) => a.name).join(" and "),
+  );
   // Dates in news.yaml: "2026-11-16" in feeds, "16 November 2026" on the page.
   const toDate = (value) => (value instanceof Date ? value : new Date(value));
   eleventyConfig.addFilter("isoDate", (value) => toDate(value).toISOString().slice(0, 10));

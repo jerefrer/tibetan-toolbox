@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
     name: t.name,
     url: t.url,
     icon: ('/assets/img/tools/' + t.id + '.png') | url,
-    author: t.author.name,
+    author: t | authorNames,
     description: t.description,
     needs: t.needs,
     needNames: t.needs | needNames(needs),

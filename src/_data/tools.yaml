@@ -1,6 +1,6 @@
 # The single source of truth for every tool in the directory.
 #
-# Required: id, name, url, author {name, url}, description, needs (ids from needs.yaml),
+# Required: id, name, url, author {name, url} (or authors: a list of them), description, needs (ids from needs.yaml),
 #           platforms (web | mac | windows | ios | android), free, openSource, developer
 # Optional: repo (source URL), language (libraries), maintainer: jerefrer (the site's maintainer's own tools),
 #           teaser: "short note" (lists the library in the home page's developer teaser)
@@ -60,7 +60,9 @@
 - id: easy-tibetan-copy
   name: Easy Tibetan Copy
   url: https://buda-base.github.io/easy-tibetan-copy/
-  author: { name: Frère Jérémy, url: https://frerejeremy.me }
+  authors:
+    - { name: Frère Jérémy, url: https://frerejeremy.me }
+    - { name: Élie Roux, url: https://github.com/eroux }
   description: Drop a PDF, Word or RTF file and get correct Unicode Tibetan back, ready to copy, paste and search. Everything runs in your browser and the file never leaves your device.
   needs: [copy-from-pdf, convert-old-documents]
   platforms: [web]
