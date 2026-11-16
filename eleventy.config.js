@@ -27,6 +27,9 @@ export default function (eleventyConfig) {
   // Neutral order: alphabetical, whoever the author is.
   eleventyConfig.addFilter("userTools", (tools) => tools.filter((tool) => !tool.developer).sort(byName));
   eleventyConfig.addFilter("devTools", (tools) => tools.filter((tool) => tool.developer).sort(byName));
+  // Fonts are many and only fonts: on the all-tools list they go after the other tools, so a platform filter still opens on those.
+  const onlyFonts = (tool) => tool.needs.every((need) => need === "fonts");
+  eleventyConfig.addFilter("fontsLast", (tools) => [...tools.filter((tool) => !onlyFonts(tool)), ...tools.filter(onlyFonts)]);
   // Teaser keeps the order of tools.yaml, which is the order shown on the home page.
   eleventyConfig.addFilter("teasers", (tools) => tools.filter((tool) => tool.developer && tool.teaser));
   eleventyConfig.addFilter("needName", (needId, needs) => needs.find((n) => n.id === needId)?.name ?? needId);

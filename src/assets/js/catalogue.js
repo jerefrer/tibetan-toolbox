@@ -57,7 +57,7 @@
     if (open) parts.push("open source");
     if (dev) parts.push("developer libraries");
     const count = shown + (shown === 1 ? " tool" : " tools");
-    summary.textContent = parts.length ? count + " matching " + parts.join(", ") : total + " tools, in alphabetical order.";
+    summary.textContent = parts.length ? count + " matching " + parts.join(", ") : total + " tools, in alphabetical order, with fonts and developer libraries last.";
     empty.hidden = shown !== 0;
   }
 
