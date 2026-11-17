@@ -15,3 +15,9 @@ maintainer:
 # Newsletter on Buttondown. The sign-up box only appears once a username is set.
 newsletter:
   username: "tibetantoolbox"
+# Umami on analytics.frerejeremy.me: cookieless page views. Nothing is sent from
+# any domain other than the live one, so local builds are never counted.
+analytics:
+  url: https://analytics.frerejeremy.me/script.js
+  websiteId: "e22c20af-e839-414e-a9ce-05f6a9c4d7b7"
+  domain: tibetantoolbox.org

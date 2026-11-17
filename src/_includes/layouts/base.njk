@@ -33,6 +33,9 @@
   {%- if jsonld %}
   <script type="application/ld+json">{{ jsonld | jsonLd | safe }}</script>
   {%- endif %}
+  {%- if site.analytics.websiteId %}
+  <script defer src="{{ site.analytics.url }}" data-website-id="{{ site.analytics.websiteId }}" data-domains="{{ site.analytics.domain }}"></script>
+  {%- endif %}
 </head>
 <body class="{{ bodyClass }}">
   <a class="skip" href="#main">Skip to content</a>
